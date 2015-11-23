@@ -81,7 +81,6 @@
     $('.navbar').height()>56 ?
     $(".navbar-toggle").trigger( "click" )
     :null;
-
   }
 
   app.controller('basicSkillCtrl',['$scope','$timeout', function($scope,$timeout){
@@ -94,7 +93,6 @@
     init();
   }]);
 
-
   app.controller('angularCtrl',['$scope','$timeout','$http', function($scope,$timeout,$http){
     checkNavBar();
     var tabSel;
@@ -102,7 +100,6 @@
       tabSelected=2;
       checkNavBar();
     };
-
     init();
   }]);
 
@@ -113,7 +110,6 @@
       tabSelected=2;
       checkNavBar();
     };
-
     init();
   }]);
 
@@ -154,12 +150,30 @@
       //  $(window).scrollTop($(window).height());
       var translate=-$(window).width();
       var timeLine = new TimelineLite();
-      timeLine.to(document.getElementById('landPageBody'),0, {scale:0.8});
+      timeLine.set(document.getElementById('landPageBody'), {scale:0.8,display:'block'});
+
       timeLine.to(document.getElementById('landingScreen'),0.3, {scale:0.8});
       timeLine.to(document.getElementById('landingScreen'),0.3, {x:translate});
       timeLine.to(document.getElementById('landPageBody'),0.5, {scale:1},'-=0.3');
+      
       timeLine.set(document.getElementById('practice'), {display:'none'});
       //  document.getElementById('practice').style.display='none'
+
+      $('#slickID').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: false
+      });
+
+      $('#gallaryId').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: false
+      });
     };
 
     document.getElementById('modalWindowClose').onclick=function(){
@@ -202,7 +216,6 @@
     timeLine.play();
   };
 
-
   $('#landPageBody').scroll(function(){
     var elementTopOffset=document.getElementById('practicOfApplicationHeader').getBoundingClientRect().top;
     var windowHeight=$(window).height()/2;
@@ -215,22 +228,6 @@
       timeLine.to(document.getElementById('communicationStepSecond'), 0.6, {left:secondLeft});
       timeLine.to(document.getElementById('communicationStepThird'), 0.6, {left:thirdLeft},'-=0.6');
     }
-  });
-
-  $('#slickID').slick({
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: false
-  });
-
-  $('#gallaryId').slick({
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    adaptiveHeight: false
   });
 
   $(function() {

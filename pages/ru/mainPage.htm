@@ -1,277 +1,266 @@
- 
+
 <!DOCTYPE html>
- <meta charset="utf-8">
+<meta charset="utf-8">
+<div id="practice" ng-init='tab.setTab(1)' id='landPageStart'  class='landPageBox' ng-controller="landPageCtrl as ctrl" style='min-height:100%; margin:0; perspective:1200px;z-index:999999;'>
 
- <div id="practice" ng-init='tab.setTab(1)' id='landPageStart'  class='landPageBox' ng-controller="landPageCtrl as ctrl" style='min-height:100%; margin:0;'>
+  <div  class="landPageBox" id='landingScreen' >
 
- <div  class="landPageBox" landingScreen style="background:url(/photos/mainPage4.jpg) no-repeat center; background-size:cover; height:100%; margin:0;">    
-
-  <div  style="height:auto; position:absolute; display:flex; flex-direction:row; justify-content:center; width:100%; align-items:center;">
-
-     <div class='headerBlocks sideHeaderBlocks' style='margin-right:-10px;'>UTO<br>You Through Others</div>
-     <div class='headerBlocks'>Авторский проект</div>
-      <div class='headerBlocks sideHeaderBlocks' style='margin-left:-10px;'>Ольга Смирнова<br>Е-mail:olgvsmirnova@gmail.com</div>
-</div>
-<div style="height:100%; width:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; ">
-
-
-<div class='centerBlock' id='secondCentralBlock'>
-     Обучение Говорить и Думать Совместно<br> и, как результат, изменение Качества Действия человека/группы
-</div>
+    <div  class="headerFlex">
+      <div class='headerBlocks sideHeaderBlocks' id='leftHeaderBlocks' style='margin-right:-10px;'>UTO<br>You Through Others</div>
+      <div class='headerBlocks' id='centralHeaderBlocks'>Авторский проект</div>
+      <div class='headerBlocks sideHeaderBlocks' id='rightHeaderBlocks' style='margin-left:-10px;'>Ольга Смирнова<br>olgvsmirnova@gmail.com</div>
+    </div>
+    <div style="height:100%; width:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; ">
+      <div class='centerBlock' id='secondCentralBlock'>
+        Обучение Говорить и Думать Совместно<!--<br> и, как результат, изменение Качества Действия человека/группы-->
+      </div>
       <div class='centerBlock' id='firstCentralBlock'>
-        Техника Диалога - захват ресурса эмерджентности  
-</div>
-<div class='centerBlock' id='thirdCentralBlock'>
-Овладей технологией диалогической коммуникации<br> и получи свой Диалог-решение адаптивных проблем организации.  
-</div>
+        Техника Диалога - захват ресурса эмерджентности
+      </div>
+      <div class='centerBlock' id='thirdCentralBlock'>
+        Овладей технологией диалогической коммуникации<br> и получи свой Диалог-решение адаптивных проблем организации.
+      </div>
     </div>
-
-    </div>
-<div class='buttonWrapperMain'><button class='toMainPartButton' id="toMainPart">Узнать больше</button></div>
- </div>
-
-<!-- body scroll-->
-<div style="width:100%; height:100%; overflow-y:scroll; overflow-x:hidden;-webkit-overflow-scrolling:touch; background:url(photos/modenBack4.jpg) no-repeat center; background-size:cover;" id='landPageBody'>
-
-<div  class="landPageBox">
-
-<div class="headerPage">Диалог - это Комплекс Действий при решении</div>
-
-<div  style="height:auto; display:flex; flex-direction:row; justify-content:space-between; width:100%; margin-left:30px; margin-top:30px; margin-right:60px; align-content:stretch; align-items:stretch;">
-
-<div class='slider' id='slickID'>
-  <div class='displaingDivs'>Сотрудники отбирались по необходимым компетенциям как <span style="white-space: nowrap"> команда профессионалов, но</span><br><br>
-- В коллективе открытые конфликты, срывы сроков заданий, публикация резюме на поисковиках<br><br>
-- Все рабочие процессы  протекают размеренно в атмосфере абсолютного комфорта без идей и предложений
-</div>
-
-  <div class='displaingDivs'>Каков потенциал сотрудников для изменений?<br><br>
-Как мотивировать персонал на изменения?
-</div>
-
-  <div class='displaingDivs'>Как вовлечь персонал в профессиональную деятельность до "состояния потока"?<br><br>
-Нуждается ли организация в подобном вовлечении?
-</div>
-
-  <div class='displaingDivs'>В подразделениях Компании с единой корпоративной культурой, кадровой политикой, системой мотивации и вознаграждений, обучениях и развития разные показатели экономической эффективности, лояльности персонала и трудовой дисциплины.
-</div>
-
-  <div class='displaingDivs'>В Компанию приходят опытные, успешные на предыдущих местах работы специалисты.<br><br>
-Как выстроить систему адаптации и обучения, чтобы<br><br>
-- Новые сотрудники не покинули Компанию<br><br>
-- Основной постоянный персонал на подвергся демотивации
-</div>
-
-  <div class='displaingDivs'>Сотрудники успешно прошли обучение, аттестацию, но<br><br>
-- Изменений в показателях работы нет<br><br>
-- Показатели экономической эффективности снизились
-</div>
-
-  <div class='displaingDivs'>Проект начинался с общего утверждённого плана, но через месяц все участники, как "лебедь, рак и щука"
-</div>
-</div>
-
-<div class='resolveVariants'>Диалог-решение<br>ваших проблем</div>
-</div>
-</div>
-
- <div  class="landPageBox">
-  <div class="headerPage">Здравствуйте, меня зовут Ольга Смирнова. <br>Я автор проекта "Техника Диалога в бизнес-коммуникациях"</div>
-
-  <div class="videoWrapper">
-    <video src="/photos/introLow.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
   </div>
+  <div class='buttonWrapperMain'><button class='toMainPartButton' id="toMainPart"><span>Узнать больше</span></button></div>
 </div>
+<!-- body scroll-->
+<div  id='landPageBody'>
+  <div  class="landPageBox">
+    <div class="headerPage">Диалог - это Комплекс Действий при решении</div>
+    <div  style="height:auto; display:flex; flex-direction:row; justify-content:space-between; width:100%; margin-left:30px; margin-top:30px; margin-right:60px; align-content:stretch; align-items:stretch;">
 
+      <div class='slider' id='slickID'>
+        <div class='displaingDivs'>Сотрудники отбирались по необходимым компетенциям как <span style="white-space: nowrap"> команда профессионалов, но</span><br><br>
+          - В коллективе открытые конфликты, срывы сроков заданий, публикация резюме на поисковиках<br><br>
+          - Все рабочие процессы  протекают размеренно в атмосфере абсолютного комфорта без идей и предложений
+        </div>
+        <div class='displaingDivs'>Каков потенциал сотрудников для изменений?<br><br>
+          Как мотивировать персонал на изменения?
+        </div>
+        <div class='displaingDivs'>Как вовлечь персонал в профессиональную деятельность до "состояния потока"?<br><br>
+          Нуждается ли организация в подобном вовлечении?
+        </div>
+        <div class='displaingDivs'>В подразделениях Компании с единой корпоративной культурой, кадровой политикой, системой мотивации и вознаграждений, обучениях и развития разные показатели экономической эффективности, лояльности персонала и трудовой дисциплины.
+        </div>
+        <div class='displaingDivs'>В Компанию приходят опытные, успешные на предыдущих местах работы специалисты.<br><br>
+          Как выстроить систему адаптации и обучения, чтобы<br><br>
+          - Новые сотрудники не покинули Компанию<br><br>
+          - Основной постоянный персонал на подвергся демотивации
+        </div>
+        <div class='displaingDivs'>Сотрудники успешно прошли обучение, аттестацию, но<br><br>
+          - Изменений в показателях работы нет<br><br>
+          - Показатели экономической эффективности снизились
+        </div>
+        <div class='displaingDivs'>Проект начинался с общего утверждённого плана, но через месяц все участники, как "лебедь, рак и щука"
+        </div>
+      </div>
 
-<div  class="landPageBox">
-<div class="headerPage">В создании проекта "Техника Диалога" меня вдохновляли и поддерживали</div>
-<div class="photoWtapperColumn" style="width:100%; height:auto; display:flex; flex-direction:column; justify-content:center;">
+      <div class='resolveVariants'>Диалог-решение<br>ваших проблем</div>
+    </div>
+  </div>
 
-<div class="photoWtapper" style="width:100%; height:auto; display:flex; flex-direction:row; justify-content:center; flex-wrap:wrap;">
-<div class='slider' id='gallaryId'>
-         <div class='imageContainer'>
-          <div class='fullImageDiv'>
-          <img src="/photos/inspiration/File_010.jpeg" alt="Ф.М. Достоевский">
-            <div>Ф.М. Достоевский</div>
+  <div  class="landPageBox">
+    <div class="headerPage">Здравствуйте, меня зовут Ольга Смирнова. <br>Я автор проекта "Техника Диалога в бизнес-коммуникациях"</div>
+    <div class="videoWrapper">
+      <video src="/photos/introLow.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
+    </div>
+  </div>
+
+  <div  class="landPageBox">
+    <div class="headerPage">В создании проекта "Техника Диалога" меня вдохновляли и поддерживали</div>
+    <div class="photoWtapperColumn" style="width:100%; height:auto; display:flex; flex-direction:column; justify-content:center;">
+
+      <div class="photoWtapper" style="width:100%; height:auto; display:flex; flex-direction:row; justify-content:center; flex-wrap:wrap;">
+        <div class='slider' id='gallaryId'>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_010.jpeg" alt="Ф.М. Достоевский">
+              <div>Ф.М. Достоевский</div>
             </div>
-        </div>
-         <div class='imageContainer'>
-         <div class='fullImageDiv'>
-          <img src="/photos/inspiration/File_000.jpeg" alt="М.М. Бахтин">
-           <div>М.М. Бахтин</div>
-         </div>
-         </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_004.jpeg" alt="Мартин Бубер">
-         <div>Мартин Бубер</div>
-         </div>
-        </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_003.jpg" alt="Герман Гессе">
-         <div>Герман Гессе</div>
-         </div>
-        </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_009.jpeg" alt="В.И. Вернадский">
-          <div>В.И. Вернадский</div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_000.jpeg" alt="М.М. Бахтин">
+              <div>М.М. Бахтин</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_004.jpeg" alt="Мартин Бубер">
+              <div>Мартин Бубер</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_003.jpg" alt="Герман Гессе">
+              <div>Герман Гессе</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_009.jpeg" alt="В.И. Вернадский">
+              <div>В.И. Вернадский</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_007.jpeg" alt="Теодор Гофман">
+              <div>Теодор Гофман</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_006.jpeg" alt="Мартин Хайдеггер">
+              <div>Мартин Хайдеггер</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_002.jpeg" alt="Сёрен Кьеркегор">
+              <div>Сёрен Кьеркегор</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_001.jpeg" alt="В.С. Библер">
+              <div>В.С. Библер</div>
+            </div>
+          </div>
+          <div class='imageContainer'>
+            <div class='fullImageDiv'>
+              <img src="/photos/inspiration/File_005.jpeg" alt="Эдмунт Гуссерль">
+              <div>Ф.М. Достоевский</div>
+            </div>
           </div>
         </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_007.jpeg" alt="Теодор Гофман">
-         <div>Теодор Гофман</div>
-         </div>
-        </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_006.jpeg" alt="Мартин Хайдеггер">
-         <div>Мартин Хайдеггер</div>
-         </div>
-        </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_002.jpeg" alt="Сёрен Кьеркегор">
-         <div>Сёрен Кьеркегор</div>
-         </div>
-        </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_001.jpeg" alt="В.С. Библер">
-         <div>В.С. Библер</div>
-         </div>
-        </div>
-        <div class='imageContainer'>
-        <div class='fullImageDiv'>
-         <img src="/photos/inspiration/File_005.jpeg" alt="Эдмунт Гуссерль">
-         <div>Ф.М. Достоевский</div>
-         </div>
-        </div>
-   </div>
-
-</div>
-</div>
-</div>
-
-<div  class="landPageBox">
-<div class="headerPage">"Техника Диалога" позволяет раскрыть Исключительные Возможности ресурсов человеческого взаимодействия</div>
-
-<div class="videoWrapper">
-<video src="/photos/dialogTarger.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
-</div>
-</div>
-
-
-<div  class="landPageBox">
-<div class="headerPage">Практика применения</div>
-
-<div class='communicationStepsContainer'>
-
- <div class='communicationStep' id='communicationStepFirst'> first</div>
- <div class='communicationStep' id='communicationStepSecond'> second</div>
- <div class='communicationStep' id='communicationStepThird'> third</div>
-
-</div>
-
-<div class="flyingWordWrapper">
-
-<div class='flyingWords'>Диалог - Лидерство</div>
-
-<div class='flyingWords'>Диалог - Ответственность</div>
-
-<div class='flyingWords'>Диалог - Самоопределение</div>
-
-<div class='flyingWords'>Диалог - Интеграция</div>
-
-<!--<button class='flyingWords' id='dialogConflict'>Диалог - Конфликт</button>-->
-
-<div class='flyingWords'>Диалог - Конфликт</div>
-
-<div class='flyingWords'>Диалог - Развитие</div>
-
-<div class='flyingWords'>Диалог - Команда</div>
-
-<div class='flyingWords'>Диалог - Образование</div>
-
-</div>
-</div>
-
-<!--     -->
-
- <div  class="landPageBox" style="min-height:none;">
-<div class="headerPage">Мы успешны потому, что мы разные!</div>
-<div style='overflow:auto; height:auto; width:100%; -webkit-overflow-scrolling:touch;'>
-<div class="buttonWrapper">
-
-   <div class='landPageBlock'ui-sref="utoTrainings">
-   <div>Корпоративный формат 
-      <div class="linkDescription">Узнать подробнее</div>
       </div>
-   </div>  
-
-   <div class='landPageBlock'  ui-sref="utoPrograms">
-   <div>Решает проблемы
-      <div class="linkDescription">Узнать подробнее</div>
     </div>
-   </div>
+  </div>
 
-   <div class='landPageBlock'  ui-sref="utoResultsOrganis">
-   <div>Результаты для организации
-      <div class="linkDescription">Узнать подробнее</div>
+  <div  class="landPageBox">
+    <div class="headerPage">"Техника Диалога" позволяет раскрыть Исключительные Возможности ресурсов человеческого взаимодействия</div>
+    <div class="videoWrapper">
+      <video src="/photos/dialogTarger.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
+    </div>
+  </div>
+
+  <div  class="landPageBox">
+    <div class="headerPage" id='practicOfApplicationHeader'>Практика применения</div>
+
+<div class="headerMini">3 этапа диалогической коммуникации</div>
+
+    <div class='communicationStepsContainer'>
+
+      <div class='communicationStep flexCenter' id='communicationStepFirst'>
+        <div >
+          1 этап <br>Предшествует коммуникации в группе
+        </div>
       </div>
-   </div>
-
-   <div class='landPageBlock'  ui-sref="utoResultsPactis">
-   <div>Результаты для участников
-      <div class="linkDescription">Узнать подробнее</div>
+      <div class='communicationStep flexCenter' id='communicationStepSecond'>
+        <div>
+          2 этап <br>Коммуникация в группе
+        </div>
       </div>
-   </div>
-
-   <div class='landPageBlock' ui-sref="utoTools">
-   <div>За счёт чего достигается
-      <div class="linkDescription">Узнать подробнее</div>
+      <div class='communicationStep flexCenter' id='communicationStepThird'>
+        <div>
+          3 этап <br>Завершение коммуникации в группе
+        </div>
       </div>
-   </div>
-</div>
-</div>
-</div>
+    </div>
 
-<!--     -->
-
-<div  class="landPageBox">
-
-<div class="headerPage">Мы делаем себя и окружающих нас людей неконкурентноспособными</div>
-
-<div class="videoWrapper">
-<video src="/photos/concurency.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
-</div>
+<div class="headerMini">Какими должны быть условия, чтобы коммуникация в Диалоге началась?<br>
+Какими должны быть признаки завершения диалогических коммуникаций?<br>
+На какой этапе происходит диалог?
 </div>
 
+    <div class="flyingWordWrapper">
 
-<div  class="landPageBox">
-<div class="headerPage">Все знания и навыки реализуются людьми в отношении людей. Со 100% точностью сложно предсказать результат, когда индивидуальные знания, опыт и навыки сливаются в коллективные действия</div>
+      <div class='flyingWords'>Диалог - Лидерство</div>
+      <div class='flyingWords'>Диалог - Ответственность</div>
+      <div class='flyingWords'>Диалог - Самоопределение</div>
+      <div class='flyingWords'>Диалог - Интеграция</div>
+      <!--<button class='flyingWords' id='dialogConflict'>Диалог - Конфликт</button>-->
+      <div class='flyingWords'>Диалог - Конфликт</div>
+      <div class='flyingWords'>Диалог - Развитие</div>
+      <div class='flyingWords'>Диалог - Команда</div>
+      <div class='flyingWords'>Диалог - Образование</div>
 
-<div class="videoWrapper">
-<video src="/photos/result.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
-</div>
-</div>
+    </div>
+  </div>
 
-<div class='modalWindow' id='modalWindow'>
-<button class='modalWindowClose' id='modalWindowClose'>Вернуться</button>
+  <!--     -->
 
- <div class='modalContainer' id='modalContainerFirst'> first</div>
- <div class='modalContainer' id='modalContainerSecond'> second</div>
- <div class='modalContainer' id='modalContainerThird'> third</div>
+  <div  class="landPageBox" style="min-height:none;">
+    <div class="headerPage">Мы успешны потому, что мы разные!</div>
+    <div style='overflow:auto; height:auto; width:100%; -webkit-overflow-scrolling:touch;'>
+      <div class="buttonWrapper">
 
-<button class='modalWindowMore' id='modalWindowMore'>Диалог</button>
+        <div class='landPageBlock'ui-sref="utoTrainings">
+          <div>Корпоративный формат
+            <div class="linkDescription">Узнать подробнее</div>
+          </div>
+        </div>
 
- <div class='modalContainerOverlap' id='mcoFirst'> first</div>
- <div class='modalContainerOverlap' id='mcoSecond'> second</div>
- <div class='modalContainerOverlap' id='mcoThird'> third</div>
-</div>
+        <div class='landPageBlock'  ui-sref="utoPrograms">
+          <div>Решает проблемы
+            <div class="linkDescription">Узнать подробнее</div>
+          </div>
+        </div>
+
+        <div class='landPageBlock'  ui-sref="utoResultsOrganis">
+          <div>Результаты для организации
+            <div class="linkDescription">Узнать подробнее</div>
+          </div>
+        </div>
+
+        <div class='landPageBlock'  ui-sref="utoResultsPactis">
+          <div>Результаты для участников
+            <div class="linkDescription">Узнать подробнее</div>
+          </div>
+        </div>
+
+        <div class='landPageBlock' ui-sref="utoTools">
+          <div>За счёт чего достигается
+            <div class="linkDescription">Узнать подробнее</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--     -->
+
+  <div  class="landPageBox">
+
+    <div class="headerPage">Мы делаем себя и окружающих нас людей неконкурентноспособными</div>
+
+    <div class="videoWrapper">
+      <video src="/photos/concurency.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
+    </div>
+  </div>
+
+  <div  class="landPageBox">
+    <div class="headerPage">Все знания и навыки реализуются людьми в отношении людей. Со 100% точностью сложно предсказать результат, когда индивидуальные знания, опыт и навыки сливаются в коллективные действия</div>
+
+    <div class="videoWrapper">
+      <video src="/photos/result.mp4" width="50%" height="70%" controls poster="/photos/introPoster.jpg" preload="none"></video>
+    </div>
+  </div>
+
+  <div class='modalWindow' id='modalWindow'>
+    <button class='modalWindowClose' id='modalWindowClose'>Вернуться</button>
+
+    <div class='modalContainer' id='modalContainerFirst'> first</div>
+    <div class='modalContainer' id='modalContainerSecond'> second</div>
+    <div class='modalContainer' id='modalContainerThird'> third</div>
+
+    <button class='modalWindowMore' id='modalWindowMore'>Диалог</button>
+
+    <div class='modalContainerOverlap' id='mcoFirst'> first</div>
+    <div class='modalContainerOverlap' id='mcoSecond'> second</div>
+    <div class='modalContainerOverlap' id='mcoThird'> third</div>
+  </div>
 
 </div>
 </div>
