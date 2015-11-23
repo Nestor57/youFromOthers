@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html ng-app="helloPage">
-
 <head>
   <title></title>
   <meta name='Description' content=''>
@@ -17,54 +16,41 @@
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
   <script async type='application/javascript' src='/libs/fastclick.js'></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js">
-  </script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/TextPlugin.min.js"></script>
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>-->
-
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
   <script async type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 
-  <link async rel="stylesheet" type="text/css" href="libs/slick/slick.css" />
+  <link async rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
 
-  <link async rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css" />
+  <link async rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
 
   <script type="text/javascript" src="utoApp.js"></script>
 </head>
-
 <body>
-  <div class='floatingContactForm'>
+  <div class='floatingContactForm flexCenterColumnAuto'>
     <a href="http://www.123contactform.com/form-1645376/Contact-Lead-Form" style="color:white;">Свяжитесь<br>со мной</a>
   </div>
   <div ng-include="'pages/eng/utoNavigation.html'" class='include'></div>
 
-  <script type="text/javascript">
-    (function() {
-      if (window.pluso)
-        if (typeof window.pluso.start == "function") return;
-      if (window.ifpluso == undefined) {
-        window.ifpluso = 1;
-        var d = document,
-          s = d.createElement('script'),
-          g = 'getElementsByTagName';
-        s.type = 'text/javascript';
-        s.charset = 'UTF-8';
-        s.async = true;
-        s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
-        var h = d[g]('body')[0];
-        h.appendChild(s);
-      }
-    })();
-  </script>
+  <script type="text/javascript">(function() {
+    if (window.pluso)if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso==undefined) { window.ifpluso = 1;
+      var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+      s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+      s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+      var h=d[g]('body')[0];
+      h.appendChild(s);
+    }})();</script>
 
-  <div class='socialButtons'>
-    <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="facebook,linkedin,twitter,vkontakte,google,email"></div>
-  </div>
-  <div ui-view autoscroll="true"></div>
+    <div class='socialButtons'>
+      <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="facebook,linkedin,twitter,vkontakte,google,email"></div>
+    </div>
+    <div ui-view autoscroll="true"></div>
 
-</body>
-
-</html>
+  </body>
+  </html>
