@@ -150,12 +150,12 @@
       //  $(window).scrollTop($(window).height());
       var translate=-$(window).width();
       var timeLine = new TimelineLite();
-      timeLine.set(document.getElementById('landPageBody'), {scale:0.8,display:'block'});
+      timeLine.set(document.getElementById('landPageBody'), {scale:0.6,display:'block'});
 
-      timeLine.to(document.getElementById('landingScreen'),0.3, {scale:0.8});
-      timeLine.to(document.getElementById('landingScreen'),0.3, {x:translate});
-      timeLine.to(document.getElementById('landPageBody'),0.5, {scale:1},'-=0.3');
-      
+      //  timeLine.to(document.getElementById('landingScreen'),0.3, {scale:0.8});
+      timeLine.to(document.getElementById('landingScreen'),0.4, {rotationY:-30, x:translate, ease: Power1.easeIn});
+      timeLine.to(document.getElementById('landPageBody'),0.4, {scale:1, ease: Circ.easeOut},'-=0.2');
+
       timeLine.set(document.getElementById('practice'), {display:'none'});
       //  document.getElementById('practice').style.display='none'
 
@@ -173,6 +173,35 @@
         slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: false
+      });
+
+      var drawSurface = Snap("#svg"),
+          drawElement= $('#svg'),
+          drawWidth = drawElement.width(),
+          drawHeight = drawElement.height();
+
+      drawSurface.path("M"+drawWidth/2+" 0 Q 40 0 40 "+(drawHeight/2-40)).attr({
+        fill: "none",
+        stroke: "#bada55",
+        strokeWidth: 6
+      });
+
+      drawSurface.path("M"+drawWidth/2+" "+drawHeight+" Q 40 "+drawHeight+" 40 "+drawHeight/2).attr({
+        fill: "none",
+        stroke: "#bada55",
+        strokeWidth: 6
+      });
+
+      drawSurface.path("M"+drawWidth/2+" 0 Q "+(drawWidth-40)+" 0 "+(drawWidth-40)+" "+(drawHeight/2-40)).attr({
+        fill: "none",
+        stroke: "#bada55",
+        strokeWidth: 6
+      });
+
+      drawSurface.path("M"+drawWidth/2+" "+drawHeight+" Q "+(drawWidth-40)+" "+drawHeight+" "+(drawWidth-40)+" "+drawHeight/2).attr({
+        fill: "none",
+        stroke: "#bada55",
+        strokeWidth: 6
       });
     };
 

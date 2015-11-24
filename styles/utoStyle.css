@@ -57,8 +57,10 @@ ul, menu, dir {
 }
 #slickID{
   width: 50%;
+  height: 400px;
   margin-left:15px;
   margin-right:15px;
+  border-radius: 50%;
   background-color: rgba(0,100,140,0.5);
 }
 .slick-track{
@@ -86,17 +88,32 @@ ul, menu, dir {
 .slick-prev{
   left:-43px !important;
 }
+.displaingDivsResult{
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  background-color: rgba(30,40,50,0.6);
+  border-radius: 10px;
+  padding: 5px;
+  top:50%;
+}
+#displaingDivsResultLeft{
+  left:0;
+}
+#displaingDivsResultRight{
+  right:0;
+}
 .floatingContactForm{
   position:fixed;
-  right:1em;
-  bottom:1em;
+  right:1%;
+  bottom:1%;
   background-color: #326478;
-  height:120px;
-  width:120px;
+  height:70px;
+  width:110px;
   font-size: 1.5em;
   text-align: center;
   padding: 5px;
-  border-radius: 50%;
+  border-radius: 20px;
   z-index:99999;
 }
 .displaingDivs{
@@ -578,7 +595,7 @@ shadows
 }
 video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
 .modalContainer,.modalContainerOverlap,.modalWindowClose,.modalWindowMore,
-.centerBlock,.communicationStep{
+.centerBlock,.communicationStep,.displaingDivsResult{
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
 }
 .headerPage,.textHigh,.toMainPartButton,.centerBlock{
@@ -630,8 +647,8 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
 
 .socialButtons{
   position:fixed;
-  left:1em;
-  bottom:1em;
+  left:1%;
+  bottom:1%;
   background-color: transparent;
   height:auto;
   width:auto;
@@ -754,6 +771,7 @@ commynication block
   width:auto;
   height:200px;
   top:0;
+  margin-left: 6%;
   left: 0;
   z-index:9999;
   perspective: 1000px;
