@@ -63,6 +63,16 @@ ul, menu, dir {
   border-radius: 50%;
   background-color: rgba(0,100,140,0.5);
 }
+
+#gallaryId{
+	margin-top:4em;
+	margin-bottom:4em;
+  width: calc(100% - 100px);
+  height: auto;
+  background-color: transparent;
+  background-color: transparent;
+ }
+ 
 .slick-track{
   display:flex !important;;
   flex-direction:row;
