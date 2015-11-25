@@ -179,29 +179,43 @@
           drawElement= $('#svg'),
           drawWidth = drawElement.width(),
           drawHeight = drawElement.height();
+          var p1 = drawSurface.paper.path("M13,6 L8,9 M13,6 L8,3").attr({
+              fill: "none",
+    stroke: "#bada55",
+    strokeLinecap:"round"
+});
+      var marker = p1.marker(0, 0, 26, 26, 13, 6);
 
       drawSurface.path("M"+drawWidth/2+" 0 Q 40 0 40 "+(drawHeight/2-40)).attr({
         fill: "none",
         stroke: "#bada55",
-        strokeWidth: 6
+        strokeWidth: 8,
+        markerEnd:marker,
+        strokeLinecap:"round"
       });
 
       drawSurface.path("M"+drawWidth/2+" "+drawHeight+" Q 40 "+drawHeight+" 40 "+drawHeight/2).attr({
         fill: "none",
         stroke: "#bada55",
-        strokeWidth: 6
+        strokeWidth: 8,
+        markerEnd:marker,
+        strokeLinecap:"round"
       });
 
       drawSurface.path("M"+drawWidth/2+" 0 Q "+(drawWidth-40)+" 0 "+(drawWidth-40)+" "+(drawHeight/2-40)).attr({
         fill: "none",
         stroke: "#bada55",
-        strokeWidth: 6
+        strokeWidth: 8,
+        markerEnd:marker,
+        strokeLinecap:"round"
       });
 
       drawSurface.path("M"+drawWidth/2+" "+drawHeight+" Q "+(drawWidth-40)+" "+drawHeight+" "+(drawWidth-40)+" "+drawHeight/2).attr({
         fill: "none",
         stroke: "#bada55",
-        strokeWidth: 6
+        strokeWidth: 8,
+        markerEnd:marker,
+        strokeLinecap:"round"
       });
     };
 
