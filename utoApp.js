@@ -49,6 +49,14 @@
       url:'/invitation',
       templateUrl:'pages/ru/invitation.htm'
     })
+    .state('myVideos',{
+      url:'/myVideos',
+      templateUrl:'pages/ru/myVideos.htm'
+    })
+    .state('myArticles',{
+      url:'/myArticles',
+      templateUrl:'pages/ru/myArticles.htm'
+    })
   }]);
 
   app.controller('pageController', function(){
@@ -246,7 +254,6 @@
   };
   */
   document.getElementById('modalWindowMore').onclick=function(){
-
     var timeLine = new TimelineLite();
 
     timeLine.to(document.getElementById('modalContainerFirst'), 0.3, {rotationX:-30});
@@ -262,7 +269,25 @@
 
     timeLine.play();
   };
+///--------------------
 
+document.getElementById('navigationFloating').onclick=function(){
+  var timeLine = new TimelineLite();
+
+  if (this.floatingNavigationPresented){
+timeLine.to(document.getElementById('navigationFloatingBody'), 0.3, {width:0,ease: Power0.easeNone});
+timeLine.to(document.getElementById('navigationFloating'), 0.3, {rotation:0,ease: Power0.easeNone},'-=0.3');
+timeLine.set(document.getElementById('navigationFloatingBody'),  {display:'none'});
+  }else{
+    timeLine.set(document.getElementById('navigationFloatingBody'), {display:'flex'});
+    timeLine.to(document.getElementById('navigationFloating'), 0.3, {rotation:180,ease: Power0.easeNone});
+    timeLine.to(document.getElementById('navigationFloatingBody'), 0.3, {width:200,ease: Power0.easeNone});
+    timeLine.play();
+  }
+  this.floatingNavigationPresented=!this.floatingNavigationPresented;
+};
+
+///----
   $('#landPageBody').scroll(function(){
     var elementTopOffset=document.getElementById('practicOfApplicationHeader').getBoundingClientRect().top;
     var windowHeight=$(window).height()/2;
