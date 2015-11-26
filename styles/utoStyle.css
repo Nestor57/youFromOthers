@@ -4,7 +4,13 @@ body {
   text-shadow: 1px 1px 2px black;
   min-height: 100%;
   margin:0;
+  font-size: 2vmin;
   font-family: SF-UI-Display-Medium, 'SF-UI-Display-Medium', normal;
+}
+button{
+  border:none;
+  background-color: #116699 !important;
+  color:white;
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -60,7 +66,8 @@ ul, menu, dir {
   height: 400px;
   margin-left:15px;
   margin-right:15px;
-  border-radius: 50%;
+  border-radius: 15px;
+  font-size: 2vmin;
   background-color: rgba(0,100,140,0.5);
 }
 
@@ -72,7 +79,7 @@ ul, menu, dir {
   background-color: transparent;
   background-color: transparent;
  }
- 
+
 .slick-track{
   display:flex !important;;
   flex-direction:row;
@@ -101,10 +108,10 @@ ul, menu, dir {
 .displaingDivsResult{
   display: block;
   position: absolute;
-  font-size: 2em;
+  font-size: 2.5vmin;
   background-color: rgba(30,40,50,0.6);
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 2vmin;
+  padding: 1vmin;
   top:50%;
 }
 #displaingDivsResultLeft{
@@ -118,12 +125,11 @@ ul, menu, dir {
   right:1%;
   bottom:1%;
   background-color: #326478;
-  height:70px;
-  width:110px;
-  font-size: 1.5em;
+  height:auto;
+  width:auto;
   text-align: center;
-  padding: 5px;
-  border-radius: 20px;
+  padding: 1vmin;
+  border-radius: 2vmin;
   z-index:99999;
 }
 .displaingDivs{
@@ -188,54 +194,6 @@ ul, menu, dir {
 .highlight {
   opacity: 1;
 }
-@keyframes NAME-YOUR-ANIMATION {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes NAME-YOUR-ANIMATION {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-moz-keyframes NAME-YOUR-ANIMATION {
-  0% {
-    opacity: 0;
-    top: 0;
-  }
-  1% {
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    opacity: 1;
-    top: 40px;
-  }
-}
-@-o-keyframes NAME-YOUR-ANIMATION {
-  0% {
-    opacity: 0;
-    top: 0;
-  }
-  1% {
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    opacity: 1;
-    top: 40px;
-  }
-}
 
 @media screen and (max-width: 800px) {
   .navbar-header {
@@ -287,36 +245,6 @@ ul, menu, dir {
   }
 }
 
-@-webkit-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-  }
-}
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1) ;
@@ -491,7 +419,7 @@ ul {
 }
 .centerBlock{
   text-align: center;
-  font-size: 2.5em;
+  font-size: 5vmin;
   padding: 0.5em;
   width: auto;
   z-index: 10;
@@ -500,7 +428,7 @@ ul {
   background-color: rgba(0,50,80,0.6);
 }
 #secondCentralBlock,#thirdCentralBlock{
-  font-size: 1.5em;
+  font-size: 4vmin;
 }
 #secondCentralBlock{
   margin-bottom: 5px;
@@ -515,7 +443,7 @@ ul {
   height: auto;
   text-align: center;
   z-index: 15;
-  font-size: 1.5em;
+  font-size: 3.5vmin;
   padding:5px;
   margin: 5px;
   background-color: rgba(90,90,90,0.2);
@@ -538,13 +466,7 @@ ul {
 #centralHeaderBlocks{
   opacity: 0;
 }
-.backImage{
-  filter: brightness(0.4);
-  -webkit-filter: brightness(0.4);
-  -moz-filter: brightness(0.4);
-  -o-filter: brightness(0.4);
-  -ms-filter: brightness(0.4);
-}
+
 html, body, .ng-scope:not(.navbar):not(.include) {
   height: 100%;
   width: 100%;
@@ -552,15 +474,10 @@ html, body, .ng-scope:not(.navbar):not(.include) {
 .pagesBack{
   background:url(/photos/sideBack.jpg) no-repeat center;
   background-size:cover;
-}
-.navButtons{
-  position:absolute;
-  width:10em;
-  height:10em;
-  background-color:red;
-  border-radius:50%;
-  left:calc(50% - 5em);
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:-1;
 }
 #navButton1{
   top:calc(100% - 5em);
@@ -617,7 +534,7 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
   z-index: 10;
   margin-left:10px;
   width:calc(100% - 30px);
-  font-size:2.2em;
+  font-size: 3.5vmin;
   height: auto;
   text-align: center;
   margin-top: 15px;
@@ -625,7 +542,7 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
 }
 .headerMini{
   width:auto;
-  font-size:1.5em;
+  font-size: 2.5vmin;
   margin-left:15px;
   margin-right:15px;
   background-color: rgba(60,90,150,0.8);
@@ -686,7 +603,6 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
   font-family: Lobster-Regular; /* Гарнитура шрифта */
   src: url(/fonts/lobster2.ttf); /* Путь к файлу со шрифтом */
 }
-
 .modalWindow{
   position:fixed;
   width:100%;
@@ -699,7 +615,6 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
   z-index:9999;
   perspective: 1000px;
 }
-
 .modalContainer,.modalContainerOverlap{
   margin:15px;
   position:absolute;
@@ -708,11 +623,6 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
   width:calc(30% - 10px);
   height:calc(100% - 40px);
   background-color:rgba(0,60,100,1);
-}
-button{
-  border:none;
-  background-color: #116699 !important;
-  color:white;
 }
 .modalContainerOverlap{
   position:absolute;
@@ -799,4 +709,14 @@ commynication block
 }
 #sidePageCtrl{
   top:1em;
+}
+/*---------
+animation properties
+---------*/
+#headerFirst{
+  transform: translateY(-3em);
+}
+
+#slickID,#displaingDivsResultLeft,#displaingDivsResultRight{
+  opacity: 0;
 }

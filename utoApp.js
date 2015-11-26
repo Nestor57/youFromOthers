@@ -153,10 +153,14 @@
       timeLine.set(document.getElementById('landPageBody'), {scale:0.6,display:'block'});
 
       //  timeLine.to(document.getElementById('landingScreen'),0.3, {scale:0.8});
-      timeLine.to(document.getElementById('landingScreen'),0.4, {rotationY:-30, x:translate, ease: Power1.easeIn});
+      timeLine.to(document.getElementById('landingScreen'),0.4, {rotationY:-30, x:translate, ease: Power2.easeIn});
       timeLine.to(document.getElementById('landPageBody'),0.4, {scale:1, ease: Circ.easeOut},'-=0.2');
-
       timeLine.set(document.getElementById('practice'), {display:'none'});
+      timeLine.to(document.getElementById('headerFirst'),0.6, {y:0, ease: Circ.easeOut},'+=0.2');
+      timeLine.to(document.getElementById('slickID'),1.1, {opacity:1});
+
+      timeLine.to("#displaingDivsResultLeft", 0.9, {autoAlpha:1});
+      timeLine.to("#displaingDivsResultRight", 0.9, {autoAlpha:1},'-=0.9');
       //  document.getElementById('practice').style.display='none'
 
       $('#slickID').slick({
