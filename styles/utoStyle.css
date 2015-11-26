@@ -362,26 +362,6 @@ ul {
 [ui-view].ng-leave-active {
   opacity: 0;
 }
-.toRepeat.ng-enter,
-.toRepeat.ng-leave {
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
-  height: 500px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.toRepeat.ng-enter {
-  left: 100%;
-}
-.toRepeat.ng-leave,
-.toRepeat.ng-enter.ng-enter-active {
-  left: 0;
-}
-.toRepeat.ng-leave.ng-leave-active {
-  left: -100%;
-}
 .programsBox {
   top: 0px;
   position: relative;
