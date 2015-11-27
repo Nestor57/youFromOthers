@@ -164,7 +164,7 @@
       timeLine.to(document.getElementById('landingScreen'),0.4, {rotationY:-30, x:translate, ease: Power2.easeIn});
       timeLine.to(document.getElementById('landPageBody'),0.4, {scale:1, ease: Circ.easeOut},'-=0.2');
       timeLine.set(document.getElementById('practice'), {display:'none'});
-      timeLine.to(document.getElementById('headerFirst'),0.6, {y:0, ease: Circ.easeOut},'+=0.2');
+      timeLine.to(document.getElementById('headerFirst'),0.6, {y:10, ease: Circ.easeOut},'+=0.2');
       timeLine.to(document.getElementById('slickID'),1.1, {opacity:1});
 
       timeLine.to("#displaingDivsResultLeft", 0.9, {autoAlpha:1});
@@ -270,7 +270,7 @@
     timeLine.play();
   };
 ///--------------------
-
+/*
 document.getElementById('navigationFloating').onclick=function(){
   var timeLine = new TimelineLite();
 
@@ -286,7 +286,7 @@ timeLine.set(document.getElementById('navigationFloatingBody'),  {display:'none'
   }
   this.floatingNavigationPresented=!this.floatingNavigationPresented;
 };
-
+*/
 ///----
   $('#landPageBody').scroll(function(){
     var elementTopOffset=document.getElementById('practicOfApplicationHeader').getBoundingClientRect().top;
