@@ -137,13 +137,16 @@
     angular.element(document).ready(function () {
       var timeLine = new TimelineLite();
 
-      timeLine.to("#firstCentralBlock", 0.9, {autoAlpha:1, marginBottom:0});
-      timeLine.to("#secondCentralBlock", 0.9, {autoAlpha:1,rotationX:0});
-      timeLine.to("#thirdCentralBlock", 0.9, {autoAlpha:1,rotationX:0},'-=0.9');
-      timeLine.to("#centralHeaderBlocks", 0.9, {autoAlpha:1});
-      timeLine.to("#leftHeaderBlocks", 0.9, {autoAlpha:1});
-      timeLine.to("#rightHeaderBlocks", 0.9, {autoAlpha:1},'-=0.9');
-
+      timeLine.to("#firstCentralBlock", 0.6, {autoAlpha:1, marginBottom:0});
+      timeLine.to("#secondCentralBlock", 0.6, {autoAlpha:1,rotationX:0});
+      timeLine.to("#thirdCentralBlock", 0.6, {autoAlpha:1,rotationX:0},'-=0.6');
+      timeLine.to("#centralHeaderBlocks", 0.6, {autoAlpha:1});
+      timeLine.to("#leftHeaderBlocks", 0.6, {autoAlpha:1});
+      timeLine.to("#rightHeaderBlocks", 0.6, {autoAlpha:1},'-=0.6');
+      timeLine.to("#toMainPart", 0.6, {autoAlpha:1});
+      timeLine.to("#floatingContactForm", 0.8, {autoAlpha:1});
+      timeLine.to("#socialButtons", 0.8, {autoAlpha:1},'-=0.8');
+/*
       TweenMax.fromTo(document.getElementById('toMainPart'), 0.7, {
         boxShadow: "0px 0px 0px 0px rgba(255,255,255,0.3)"
       }, {
@@ -152,6 +155,7 @@
         yoyo: true,
         ease: Linear.easeNone
       });
+      */
     });
 
     document.getElementById('toMainPart').onclick=function(){
@@ -161,14 +165,14 @@
       timeLine.set(document.getElementById('landPageBody'), {scale:0.6,display:'block'});
 
       //  timeLine.to(document.getElementById('landingScreen'),0.3, {scale:0.8});
-      timeLine.to(document.getElementById('landingScreen'),0.4, {rotationY:-30, x:translate, ease: Power2.easeIn});
-      timeLine.to(document.getElementById('landPageBody'),0.4, {scale:1, ease: Circ.easeOut},'-=0.2');
+      timeLine.to(document.getElementById('landingScreen'),0.5, {rotationY:-30, x:translate, ease: Power2.easeIn});
+      timeLine.to(document.getElementById('landPageBody'),0.5, {scale:1, ease: Circ.easeOut},'-=0.2');
       timeLine.set(document.getElementById('practice'), {display:'none'});
-      timeLine.to(document.getElementById('headerFirst'),0.6, {y:10, ease: Circ.easeOut},'+=0.2');
-      timeLine.to(document.getElementById('slickID'),1.1, {opacity:1});
+      timeLine.to(document.getElementById('headerFirst'),0.8, {y:10, ease: Circ.easeOut});
+      timeLine.to(document.getElementById('slickID'),0.8, {opacity:1},'-=0.3');
 
-      timeLine.to("#displaingDivsResultLeft", 0.9, {autoAlpha:1});
-      timeLine.to("#displaingDivsResultRight", 0.9, {autoAlpha:1},'-=0.9');
+      timeLine.to("#displaingDivsResultLeft", 0.8, {autoAlpha:1},'-=0.3');
+      timeLine.to("#displaingDivsResultRight", 0.8, {autoAlpha:1},'-=0.9');
       //  document.getElementById('practice').style.display='none'
 
       $('#slickID').slick({

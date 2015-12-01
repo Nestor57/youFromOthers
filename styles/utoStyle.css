@@ -1,5 +1,4 @@
 body {
-  background-color: rgba(200,200,255,1);
   color: white;
   text-shadow: 1px 1px 2px black;
   min-height: 100%;
@@ -104,7 +103,7 @@ ul, menu, dir {
   background-color: rgba(30,40,50,0.6);
   border-radius: 2vmin;
   padding: 1vmin;
-  top:50%;
+  margin-top:calc(200px - 2vmin);
 }
 #displaingDivsResultLeft{
   left:0;
@@ -121,6 +120,7 @@ ul, menu, dir {
   width:auto;
   padding: 1vmin;
   border-radius: 2vmin;
+  opacity: 0;
   z-index:99999;
 }
 .displaingDivs{
@@ -297,8 +297,8 @@ ul, menu, dir {
 .buttonWrapperMain{
   width:100%;
   display:flex;
-  position:absolute;
-  top:calc(100% - 44px);
+  position:relative;
+  margin-top: 44px;
   flex-direction:row;
   justify-content:center;
   flex-wrap:wrap;
@@ -313,6 +313,7 @@ ul, menu, dir {
   border-radius:5px;
   padding: 5px;
   z-index: 10;
+  opacity: 0;
 }
 
 a {
@@ -357,6 +358,7 @@ ul {
   flex-direction:row;
   justify-content:space-between;
   width:100%;
+  align-items: center;
 }
 .centerBlock{
   font-size: 5vmin;
@@ -401,6 +403,7 @@ ul {
 }
 #centralHeaderBlocks{
   opacity: 0;
+  height:4vmin;
 }
 
 html, body, .ng-scope:not(.navbar):not(.include) {
@@ -457,7 +460,7 @@ shadows
 .headerPage, .flyingWords, .floatingContactForm,video,.headerMini,.navbar,#landingScreen,#landPageBody{
   box-shadow: 0 0 4px 2px black;
 }
-video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
+video,.landPageBlock,#slickID,.resolveVariants,.slick-arrow,
 .modalContainer,.modalContainerOverlap,.modalWindowClose,.modalWindowMore,
 .centerBlock,.communicationStep,.displaingDivsResult,.navigationFloating,.navigationBlock,.navigationFloatingBody{
   box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.6);
@@ -513,6 +516,7 @@ video,.landPageBlock,#slickID,.resolveVariants,.toMainPartButton,.slick-arrow,
   background-color: transparent;
   height:auto;
   width:auto;
+  opacity: 0;
   z-index:99999;
 }
 
@@ -693,3 +697,33 @@ animation properties
 #slickID,#displaingDivsResultLeft,#displaingDivsResultRight{
   opacity: 0;
 }
+
+.box-with-text {
+  background-image: -webkit-linear-gradient(180deg,rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.5) 80%,rgba(0,0,0,0.2) 10%, white 50%);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 120px 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 5vmin;
+  -webkit-animation: stripes 1s linear infinite;
+  animation: stripes 1s linear infinite;
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 120px 0;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 120px 0;
+  }
+}
+
+.box-with-text {
+  white-space: nowrap;
+  text-shadow: none;
+}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
