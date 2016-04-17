@@ -1,75 +1,81 @@
-var gulp=require('gulp'),
-    uglify=require('gulp-uglify'),
-    gutil=require('gulp-util'),
-    less = require('gulp-less'),
+var gulp = require('gulp'),
+    uglify = require('gulp-uglify'),
+    gutil = require('gulp-util'),
     path = require('path'),
-    connect = require('gulp-connect'),
     sourcemaps = require('gulp-sourcemaps'),
-    minifyHTML = require('gulp-minify-html'),
+    concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
+    htmlmin = require('gulp-htmlmin'),
     minifyCss = require('gulp-minify-css');
 
-
-gulp.task('connect', function() {
-  connect.server({
-    root: path.resolve('./'),
-    livereload: true
-  });
+gulp.task('scripts', function() {
+    return gulp.src(['./home.htm', './pages/ru/utoAnswers.htm'])
+        .pipe(concat('bundle.htm'))
+        .pipe(gulp.dest('./bundle/'));
 });
 //Uglifies
 
-gulp.task('uglifying',function(){	
-  return gulp.src('utoApp.js')
-    .pipe(uglify()).on('error', gutil.log)
-    .pipe(gulp.dest('dist/'));
-});
-
-gulp.task('less', function () {
-  return gulp.src('styles/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('styles/'))
-    .pipe(connect.reload());
+gulp.task('uglifying', function() {
+    return gulp.src('utoApp.js')
+        .pipe(uglify()).on('error', gutil.log)
+        .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('styles/utoStyle.css')
-.pipe(minifyCss()).on('error', gutil.log)  
-
-    .pipe(gulp.dest('dist'));
+    return gulp.src('styles/utoStyle.css')
+        .pipe(minifyCss()).on('error', gutil.log)
+        .pipe(gulp.dest('minified/bundle'));
 });
 
-gulp.task('styles',function(){
-	console.log('runs styles');
+gulp.task('styles', function() {
+    console.log('runs styles');
 });
 
-gulp.task('imagemin',function ()  {
+gulp.task('imagemin', function() {
     return gulp.src('photos/*.jpg')
         .pipe(imagemin({
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
             use: [pngquant()]
         }))
         .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('minify-html', function() {
-  var opts = {
-    conditionals: false,
-    spare:false
-  };
- 
-  return gulp.src('pages/ru/*.htm')
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./dist/'));
+gulp.task('minifyHtm', function() {
+    return gulp.src('minified/bundle.htm')
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest('./'))
+});
+/*
+gulp.task('minifyJs', function() {
+    return gulp.src('minified/bundle.js')
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest('./'))
+});
+*/
+gulp.task('concatHtml', function() {
+    return gulp.src(['home.htm', 'pages/ru/*.htm'])
+        .pipe(concat('bundle.htm'))
+        .pipe(gulp.dest('minified'));
 });
 
-gulp.task('watch',function(){
-	gulp.watch('utoApp.js',['uglifying']);
-	gulp.watch('styles/utoStyle.css',['minify-css']);
-    gulp.watch('pages/ru/*.htm',['minify-html']);
+gulp.task('concatJs', function() {
+    return gulp.src('utoApp.js')
+        .pipe(concat('bundle.js'))
+        .pipe(gulp.dest('minified'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('utoApp.js', ['uglifying']);
+    gulp.watch('styles/utoStyle.css', ['minify-css']);
+    gulp.watch('pages/ru/*.htm', ['minify-html']);
 })
 
-gulp.task('default',['connect','uglifying','watch','minify-css','minify-html','imagemin']);
+gulp.task('default', ['concatHtml',/* 'concatJs',*/ 'minifyHtm'/*, 'minifyJs''minify-css'*/ ]);
