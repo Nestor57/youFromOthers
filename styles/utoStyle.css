@@ -182,11 +182,15 @@ ul {
     list-style: none;
 }
 .programsText {
-    margin-bottom: 1.5em;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
     width: 100%;
     display: inline-block;
     color: black;
     z-index: 9;
+}
+.programsText:first-child{
+  margin-top: 0;
 }
 .headerFlex {
     height: auto;
@@ -546,7 +550,7 @@ animation properties
     margin: 0;
     bottom:0;
 }
-button, input, optgroup, select, textarea {
+button, optgroup, select, textarea {
     font-size: 1rem !important;
     text-shadow: 1px 1px 2px black;
 }
@@ -609,4 +613,7 @@ cursor: pointer !important;
 }
 .button-clear:active,  button:focus{
 outline: none !important;
+}
+.textHigh{
+  font-size: 1.1rem;
 }

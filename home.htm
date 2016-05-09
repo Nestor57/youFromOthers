@@ -13,53 +13,10 @@
     <link rel='stylesheet' type='text/css' href='styles/utoStyle.css'>
         <link rel='stylesheet' type='text/css' href='styles/meStyle.css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href="./libs/responsive-calendar/responsive-calendar.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
-  <!--
-<script type="text/javascript">
-var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
-document.write(unescape("%3Cscript src='" + cfJsHost + "www.123contactform.com/includes/tinybox/tinybox.js.minified.js?1e8287c' type='text/javascript'%3E%3C/script%3E"));
-</script>
-
-<link href="//www.123contactform.com/includes/tinybox/tinyboxstyle.css.minified.css?1e8287c" rel="stylesheet" type="text/css"  />
-<a href="javascript:"  onclick="var tinybox_width = window.innerWidth || document.documentElement.clientWidth; tinybox_width=Math.round(tinybox_width*0.6);TINY.box.show({iframe:'http://www.123contactform.com/form-1645376/Contact-Lead-Form',boxid:'frameless',width:tinybox_width,height:500,fixed:false,maskid:'bluemask',maskopacity:40})"><img border="0" src="photos/contact.png"></a>
-
-
-
-
-  <div class='navigationFloating' id='navigationFloating'> </div>
-  <div class='navigationFloatingBody' id='navigationFloatingBody'>
-    <div id='navigationFloatingWrapper'>
-  <div class='navigationBlock'  ui-sref='myVideos'>
-    <div >Мои видео
-    </div>
-  </div>
-  <div class='navigationBlock'  ui-sref='myArticles'>
-    <div>Мои статьи
-    </div>
-  </div>
-</div>
-</div>
--->
-    <script type='text/javascript'>
-        (function() {
-            if (window.pluso)
-                if (typeof window.pluso.start == 'function') return;
-            if (window.ifpluso == undefined) {
-                window.ifpluso = 1;
-                var d = document,
-                    s = d.createElement('script'),
-                    g = 'getElementsByTagName';
-                s.type = 'text/javascript';
-                s.charset = 'UTF-8';
-                s.async = true;
-                s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
-                var h = d[g]('body')[0];
-                h.appendChild(s);
-            }
-        })();
-    </script>
 
     <div class='socialButtons' id='socialButtons'>
         <div class='pluso' data-background='transparent' data-options='big,round,line,horizontal,nocounter,theme=08' data-services='facebook,linkedin,twitter,vkontakte,google,email'></div>
@@ -72,32 +29,26 @@ document.write(unescape("%3Cscript src='" + cfJsHost + "www.123contactform.com/i
     <nav class='navbar navbar-fixed-top navbar-light bg-primary'>
           <!--  <a class='navbar-brand' href='#'>You Through Others</a> -->
             <ul class='nav navbar-nav'>
+              <li class='nav-item'>
+                  <button  class='button-clear' type='button' data-toggle='modal' data-target='#dialogTech' class='landPageBlock'>
+                      <div>Диалог-технология
+                      </div>
+                  </button>
+              </li>
+              <li class='nav-item'>
+                  <button class='button-clear' type='button' data-toggle='modal' data-target='#dialogAnswer' class='landPageBlock'>
+                      <div>Диалог-решение
+                      </div>
+                  </button>
+              </li>
                 <li class='nav-item active'>
-                    <button class='button-clear' type='button' data-toggle='modal' data-target='#utoTrainings' class='landPageBlock'>
-                        <div>Техника Диалога
+                    <button class='button-clear' type='button' data-toggle='modal' data-target='#dialog' class='landPageBlock'>
+                        <div>Обучение
                     </button>
                 </li>
                 <li class='nav-item'>
-                    <button class='button-clear' type='button' data-toggle='modal' data-target='#utoPrograms' class='landPageBlock'>
-                        <div>Решает проблемы
-                        </div>
-                    </button>
-                </li>
-                <li class='nav-item'>
-                    <button  class='button-clear' type='button' data-toggle='modal' data-target='#utoResultOrg' class='landPageBlock'>
-                        <div>Результат
-                        </div>
-                    </button>
-                </li>
-                <li class='nav-item'>
-                    <button class='button-clear' type='button' data-toggle='modal' data-target='#utoResultPractic' class='landPageBlock'>
-                        <div>Результат
-                        </div>
-                    </button>
-                </li>
-                <li class='nav-item'>
-                    <button class='button-clear' type='button' data-toggle='modal' data-target='#utoTools' class='landPageBlock'>
-                        <div>Инструментарий
+                    <button class='button-clear' type='button' data-toggle='modal' data-target='#utoCalendar' class='landPageBlock'>
+                        <div>Календарь
                         </div>
                     </button>
                 </li>
@@ -131,7 +82,7 @@ document.write(unescape("%3Cscript src='" + cfJsHost + "www.123contactform.com/i
             Обучение Говорить и Думать Совместно
         </div>
         <div class='centerBlock' id='thirdCentralBlock'>
-            Овладей технологией диалогической коммуникации и получи свой Диалог-решение адаптивных проблем организации.
+            Измени качество действия человека и группы
         </div>
         <div class='buttonWrapperMain'>
             <button class='toMainPartButton button-clear' id='toMainPart'><span class='box-with-text'>Узнать больше</span></button>
@@ -371,7 +322,7 @@ document.write(unescape("%3Cscript src='" + cfJsHost + "www.123contactform.com/i
     <script type='application/javascript' src='libs/tether.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js' integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7' crossorigin='anonymous'></script>
-
+<script src="./libs/responsive-calendar/responsive-calendar.js"></script>
 <script async type='application/javascript' src='./utoApp.js'></script>
     <script async type='application/javascript' src='libs/fastclick.js'></script>
 </body>

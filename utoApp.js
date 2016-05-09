@@ -24,8 +24,6 @@ $(function() {
             videoWidth,
             videoHeight;
 
-        console.log(windowHeight);
-
         $(element).each(function() {
             var videoAspectRatio = $(this).data('height') / $(this).data('width');
 
@@ -60,6 +58,9 @@ $(function() {
     $('#dialogCarousel').carousel({
         interval: 2500
     })
+    if ($('.responsive-calendar').responsiveCalendar) {
+        $('.responsive-calendar').responsiveCalendar();
+    }
 
     var from, to, subject, text;
     $("#send_email").click(function() {
@@ -105,16 +106,14 @@ $('#landingVideo').load(function() {
 
 })
 var checkScroll = function(event) {
-    debugger
     let scrollPos = document.body.scrollTop
     let nextPos = 0
     if (scrollPos < window.innerHeight) {
-$(".landPageContainer").scroll(completeScroll);
+        $(".landPageContainer").scroll(completeScroll);
     }
 }.bind(this)
 
 var completeScroll = function(event) {
-    debugger
     let scrollPos = document.body.scrollTop
     let nextPos = 0
     if (scrollPos < window.innerHeight) {
@@ -129,10 +128,10 @@ var completeScroll = function(event) {
     }
 }.bind(this)
 
-$(".toMainPartButton").click(function(){
-  $(".landPageContainer").stop().animate({
-      scrollTop: window.innerHeight
-  }, '300', 'swing')
+$(".toMainPartButton").click(function() {
+    $(".landPageContainer").stop().animate({
+        scrollTop: window.innerHeight
+    }, '300', 'swing')
 })
 
 $(".landPageContainer").scroll(completeScroll);
