@@ -106,24 +106,26 @@ $('#landingVideo').load(function() {
 
 })
 var checkScroll = function(event) {
-    let scrollPos = document.body.scrollTop
-    let nextPos = 0
+    var scrollPos = document.body.scrollTop;
+    var nextPos = 0;
     if (scrollPos < window.innerHeight) {
         $(".landPageContainer").scroll(completeScroll);
     }
 }.bind(this)
 
 var completeScroll = function(event) {
-    let scrollPos = document.body.scrollTop
-    let nextPos = 0
+    var scrollPos = document.body.scrollTop;
+    var nextPos = 0;
     if (scrollPos < window.innerHeight) {
         nextPos = window.innerHeight
         $("html, body").stop().animate({
             scrollTop: nextPos
-        }, '300', 'swing')
+        }, '150', 'swing')
         $(".landPageContainer").stop().animate({
             scrollTop: 0
-        }, '300', 'swing')
+        }, '150', 'swing', function() {
+            document.getElementById('mainNavbar').style.opacity = 1;
+        })
         $(".landPageContainer").off('scroll', checkScroll)
     }
 }.bind(this)

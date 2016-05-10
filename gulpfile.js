@@ -33,7 +33,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('imagemin', function() {
-    return gulp.src('photos/*.jpg')
+    return gulp.src('photos/*.png')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
@@ -41,7 +41,7 @@ gulp.task('imagemin', function() {
             }],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('minified/'));
 });
 
 gulp.task('minifyHtm', function() {
@@ -78,4 +78,4 @@ gulp.task('watch', function() {
     gulp.watch('pages/ru/*.htm', ['minify-html']);
 })
 
-gulp.task('default', ['concatHtml',/* 'concatJs',*/ 'minifyHtm'/*, 'minifyJs''minify-css'*/ ]);
+gulp.task('default', ['concatHtml',/* 'concatJs',*/ 'minifyHtm'/*, 'minifyJs''minify-css'*/,'imagemin' ]);
