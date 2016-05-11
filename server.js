@@ -1,8 +1,9 @@
 var express = require('express');
 var nodemailer = require("nodemailer");
-var xoauth2 = require('xoauth2');
+var fs = require('fs');
 var $ = require('./jquery-2.2.3.min');
 var smtpTransport = require('nodemailer-smtp-transport');
+var http2 = require('http2');
 //var utoApp = require('./utoApp');
 var app = express();
 app.use(express.static(__dirname));
@@ -57,7 +58,11 @@ app.get('/send', function(req, res) {
 });
 
 /*--------------------Routing Over----------------------------*/
+var options = {
+  key: fs.readFileSync('./example/localhost.key'),
+  cert: fs.readFileSync('./example/localhost.crt')
+};
 
-app.listen(3000, function() {
-    console.log("Express Started on Port 3000");
-});
+require('http2').createServer(options, function(request, response) {
+  response.end('Hello world!');
+}).listen(8080);
