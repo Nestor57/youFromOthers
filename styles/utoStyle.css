@@ -21,6 +21,7 @@ body {
     background-color: #005566;
     transition: 0.7s linear all;
     -webkit-transition: 0.7s linear all;
+    text-shadow: 1px 1px white;
 }
 ul, menu, dir {
     -webkit-margin-before: 0em;
@@ -291,7 +292,7 @@ html, body {
 shadows
 */
 
-.navbar, .contentBlock, .alert, .modalContainer, .modalContainerOverlap,
+.alert, .modalContainer, .modalContainerOverlap,
 .communicationStep, .displaingDivsResult {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.6);
 }
@@ -306,12 +307,15 @@ shadows
     margin-bottom: 5vh;
     border-radius: 0;
 }
+.alert-success{
+  border-color: transparent;
+  background-color: transparent;
+}
 .headerPage {
     width: 100%;
     top: 0;
     color: white;
     font-size: 1.4rem;
-    background-color: rgba(0, 102, 153,0.8);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
@@ -414,10 +418,9 @@ animation properties
     width: calc(100% - 30px);
     margin-left: 15px;
     margin-right: 15px;
-    border-radius: 5px;
-    color: black;
+    color: white;
+    border-top: 1px solid white;
     text-shadow: none;
-    background-color: rgba(255, 255, 255,0.8);
     z-index: 20;
 }
 .carousel, .carousel-inner {
@@ -442,14 +445,25 @@ animation properties
 
 .carousel-indicators li {
     border: none;
+    width:0.6rem;
+    height:0.6rem;
+    transition: all 0.5s;
 }
 .carousel-indicators .active {
     border: blue !important;
+    width:1rem;
+    height:1rem;
 }
 .carusel-dots {
-    background-color: rgb(0, 50, 80) !important;
+    background-color: white !important;
     border-radius: 10px !important;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.6);
+}
+.carousel-indicators li {
+  margin:1rem!important;
+}
+.carousel-indicators.active {
+  margin:0.8rem!important;
 }
 .modal-title {
     color: black;
@@ -544,7 +558,8 @@ z-index: -1;
     width: 100%;
 }
 .bg-primary{
-  background-color: rgba(0,102,153,0.9) !important;
+  background-color: transparent !important;
+  border-right: 1px solid white;
 }
 .poster, .video-container .poster img{
   left: 0;
