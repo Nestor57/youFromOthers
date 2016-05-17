@@ -58,11 +58,16 @@ app.get('/send', function(req, res) {
 });
 
 /*--------------------Routing Over----------------------------*/
-var options = {
-  key: fs.readFileSync('./example/localhost.key'),
-  cert: fs.readFileSync('./example/localhost.crt')
-};
+//var options = {
+//  key: fs.readFileSync('./example/localhost.key'),
+//  cert: fs.readFileSync('./example/localhost.crt')
+//};
 
-require('http2').createServer(options, function(request, response) {
-  response.end('Hello world!');
-}).listen(8080);
+//require('http2').createServer(options, function(request, response) {
+//  response.end('Hello world!');
+//}).listen(8080);
+
+
+app.listen(3000, function() {
+    console.log("Express Started on Port 3000");
+});
