@@ -108,15 +108,19 @@ $('#landingVideo').load(function() {
 var checkScroll = function(event) {
     var scrollPos = document.body.scrollTop;
     var nextPos = 0;
+    debugger
     if (scrollPos < window.innerHeight) {
         $(".landPageContainer").scroll(completeScroll);
+    }else{
+      document.getElementById('mainNavbar').style.opacity = 1
     }
 }.bind(this)
 
 var completeScroll = function(event) {
     var scrollPos = document.body.scrollTop;
     var nextPos = 0;
-    if (scrollPos < window.innerHeight) {
+    if (scrollPos < window.innerHeight && isScrollComplete) {
+      isScrollComplete= false
         nextPos = window.innerHeight
         $("html, body").stop().animate({
             scrollTop: nextPos
@@ -124,9 +128,12 @@ var completeScroll = function(event) {
         $(".landPageContainer").stop().animate({
             scrollTop: 0
         }, '150', 'swing', function() {
-            document.getElementById('mainNavbar').style.opacity = 1;
+            document.getElementById('mainNavbar').style.opacity = 1
+              $(".landPageContainer").scroll(checkScroll)
+              isScrollComplete = true
         })
-        $(".landPageContainer").off('scroll', checkScroll)
+        event.preventDefault()
+        event.stopPropagation()
     }
 }.bind(this)
 
@@ -135,5 +142,5 @@ $(".toMainPartButton").click(function() {
         scrollTop: window.innerHeight
     }, '300', 'swing')
 })
-
-$(".landPageContainer").scroll(completeScroll);
+var isScrollComplete = true;
+$(".landPageContainer").scroll(checkScroll);

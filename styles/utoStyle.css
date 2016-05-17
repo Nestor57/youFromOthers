@@ -97,6 +97,7 @@ ul, menu, dir {
           align-content: space-around;
               flex-wrap: nowrap;
               height: 100%;
+          border-right:    1px solid white;
       }
   }
   @media all and (orientation: portrait) {
@@ -105,6 +106,7 @@ ul, menu, dir {
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
+        border-bottom:    1px solid white;
       }
   }
   @-webkit-keyframes pulse {
@@ -292,7 +294,7 @@ html, body {
 shadows
 */
 
-.alert, .modalContainer, .modalContainerOverlap,
+.modalContainer, .modalContainerOverlap,
 .communicationStep, .displaingDivsResult {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.6);
 }
@@ -310,6 +312,7 @@ shadows
 .alert-success{
   border-color: transparent;
   background-color: transparent;
+  color: white;
 }
 .headerPage {
     width: 100%;
@@ -431,6 +434,7 @@ animation properties
     align-content: center;
     height: 100%;
     width: 100%;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 .column {
     height: auto;
@@ -477,6 +481,7 @@ animation properties
 }
 .leftTitle {
     width: 50%;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 .columnStreth {
     flex-direction: column;
@@ -559,7 +564,6 @@ z-index: -1;
 }
 .bg-primary{
   background-color: transparent !important;
-  border-right: 1px solid white;
 }
 .poster, .video-container .poster img{
   left: 0;

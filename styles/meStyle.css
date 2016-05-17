@@ -53,9 +53,8 @@
     margin-bottom: 1rem;
     width: 100%;
     top: 0;
-    color: white;
+    color: black;
     font-size: 1.5em;
-    font-family: Lobster-Regular, 'Lobster-Regular', normal;
 }
 .modal-body {
     color: black;
