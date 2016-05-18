@@ -31,7 +31,7 @@ smtpTransport.verify(function(error, success) {
 /*------------------Routing Started ------------------------*/
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/bundle.htm');
+    res.sendFile(__dirname + '/home.htm');
 });
 app.get('/me', function(req, res) {
     res.sendFile(__dirname + '/me.htm');

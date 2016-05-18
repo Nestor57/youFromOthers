@@ -4,20 +4,6 @@
 //
 //---------------*/
 $(function() {
-    function scaleVideoContainer() {
-        var height = $(window).height() + 5;
-        var unitHeight = parseInt(height) + 'px';
-      //  $('.homepage-hero-module').css('height', unitHeight);
-    }
-
-    function initBannerVideoSize(element) {
-        $(element).each(function() {
-            $(this).data('height', $(this).height());
-            $(this).data('width', $(this).width());
-        });
-        scaleBannerVideoSize(element);
-    }
-
     function scaleBannerVideoSize(element) {
             $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
     }
@@ -59,35 +45,19 @@ $(function() {
 
         });
     });
-
-    scaleVideoContainer();
-
-    initBannerVideoSize('.video-container .poster img');
-    initBannerVideoSize('.video-container .filter');
-    initBannerVideoSize('.video-container video');
-
-    $(window).on('resize', function() {
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
-    });
-
-
 })
 
 $(window).load(function() {
-    $('#landingVideo').get(0).play();
-    $('#bodyVideo').get(0).play();
+    $('#landingVideo').get(0).play()
+    $('#bodyVideo').get(0).play()
 })
 
 $('#landingVideo').load(function() {
 
 })
 var checkScroll = function(event) {
-    var scrollPos = document.body.scrollTop;
-    var nextPos = 0;
-    debugger
+    var scrollPos = document.body.scrollTop
+    var nextPos = 0
     if (scrollPos < window.innerHeight) {
         $(".landPageContainer").scroll(completeScroll);
     }else{

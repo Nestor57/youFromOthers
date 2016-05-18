@@ -535,32 +535,28 @@ min-height:100%;
     display: block !important;
 }
 .video-container {
-    bottom: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     min-height: 100%;
     min-width: 100%;
     overflow: hidden;
     background: #000;
 }
 .video-container .poster img {
-    width: 100%;
-    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
     position: absolute;
-}
-.video-container .filter {
-    z-index: 100;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
 }
 .video-container video {
     position: absolute;
     z-index: 10;
-    bottom: 0;
+    top: 0;
         left: 0;
 }
 .video-container video.fillWidth {
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 .bg-primary{
   background-color: transparent !important;
