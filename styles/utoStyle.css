@@ -521,9 +521,10 @@ button, optgroup, select, textarea {
     border-right: none;
     border-left: none;
     position: absolute;
-width: 100%;
+min-width: 100%;
 top: 0;
 z-index: -1;
+min-height:100%;
 }
 .no-video .video-container video,
 .touch .video-container video {
@@ -534,11 +535,10 @@ z-index: -1;
     display: block !important;
 }
 .video-container {
-    position: relative;
     bottom: 0%;
     left: 0%;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     overflow: hidden;
     background: #000;
 }

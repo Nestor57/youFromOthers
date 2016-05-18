@@ -10,8 +10,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css');
 
 gulp.task('scripts', function() {
-    return gulp.src(['./home.htm', './pages/ru/utoAnswers.htm'])
-        .pipe(concat('bundle.htm'))
+    return gulp.src(['./mainPage.htm', './pages/ru/utoAnswers.htm'])
+        .pipe(concat('home.htm'))
         .pipe(gulp.dest('./bundle/'));
 });
 //Uglifies
@@ -45,7 +45,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('minifyHtm', function() {
-    return gulp.src('minified/bundle.htm')
+    return gulp.src('minified/home.htm')
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
@@ -61,8 +61,8 @@ gulp.task('minifyJs', function() {
 });
 */
 gulp.task('concatHtml', function() {
-    return gulp.src(['home.htm', 'pages/ru/*.htm'])
-        .pipe(concat('bundle.htm'))
+    return gulp.src(['mainPage.htm', 'pages/ru/*.htm'])
+        .pipe(concat('home.htm'))
         .pipe(gulp.dest('minified'));
 });
 
