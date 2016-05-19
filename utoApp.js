@@ -28,19 +28,19 @@ $(function() {
     }
 
     var from, to, subject, text;
-    $("#send_email").click(function() {
-        to = $("#to").val();
-        subject = $("#subject").val();
+    $('#send_email').click(function() {
+        to = $('#to').val();
+        subject = $('#subject').val();
 
-        text = $("#content").val();
-        $("#message").text("Sending E-mail...Please wait");
-        $.get("http://localhost:3000/send", {
+        text = $('#content').val();
+        $('#message').text('Sending E-mail...Please wait');
+        $.get('http://localhost:3000/send', {
             to: to,
             subject: subject,
             text: text
         }, function(data) {
-            if (data == "sent") {
-                $("#message").empty().html("Email is been sent at " + to + ".Please check inbox!");
+            if (data == 'sent') {
+                $('#message').empty().html('Email is been sent at ' + to + '.Please check inbox!');
             }
 
         });
@@ -59,7 +59,7 @@ var checkScroll = function(event) {
     var scrollPos = document.body.scrollTop
     var nextPos = 0
     if (scrollPos < window.innerHeight) {
-        $(".landPageContainer").scroll(completeScroll);
+        $('.landPageContainer').scroll(completeScroll);
     }else{
       document.getElementById('mainNavbar').style.opacity = 1
     }
@@ -71,14 +71,14 @@ var completeScroll = function(event) {
     if (scrollPos < window.innerHeight && isScrollComplete) {
       isScrollComplete= false
         nextPos = window.innerHeight
-        $("html, body").stop().animate({
+        $('html, body').stop().animate({
             scrollTop: nextPos
         }, '150', 'swing')
-        $(".landPageContainer").stop().animate({
+        $('.landPageContainer').stop().animate({
             scrollTop: 0
         }, '150', 'swing', function() {
             document.getElementById('mainNavbar').style.opacity = 1
-              $(".landPageContainer").scroll(checkScroll)
+              $('.landPageContainer').scroll(checkScroll)
               isScrollComplete = true
         })
         event.preventDefault()
@@ -86,10 +86,13 @@ var completeScroll = function(event) {
     }
 }.bind(this)
 
-$(".toMainPartButton").click(function() {
-    $(".landPageContainer").stop().animate({
+$('.toMainPartButton').click(function() {
+    $('.landPageContainer').stop().animate({
         scrollTop: window.innerHeight
     }, '300', 'swing')
 })
 var isScrollComplete = true;
-$(".landPageContainer").scroll(checkScroll);
+$('.landPageContainer').scroll(checkScroll);
+$(document).scroll(()=>{
+    document.getElementById('mainNavbar').style.opacity = 0;
+});

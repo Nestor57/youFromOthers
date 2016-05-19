@@ -33,7 +33,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 .meContainer {
     display: flex;
@@ -47,14 +46,16 @@
     font-size: 2.5em;
     font-family: Lobster-Regular, 'Lobster-Regular', normal;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 .meText {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 100%;
     top: 0;
-    color: black;
+    color: white;
     font-size: 1.5em;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1), 1px 1px 5px rgba(0, 0, 0, 1), 0px 0px 20px rgba(0, 0, 0, 1);
 }
 .modal-body {
     color: black;
