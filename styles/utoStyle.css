@@ -2,7 +2,7 @@ body {
     color: white;
     min-height: 100%;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
@@ -222,15 +222,15 @@ ul {
     z-index: 10;
 }
 #firstCentralBlock {
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 #secondCentralBlock {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     color: rgb(255, 153, 0);
     text-shadow: 1px 1px 2px black;
 }
 #thirdCentralBlock {
-    font-size: 1.8rem;
+    font-size: 1.8em;
 }
 .headerBlocks {
     width: auto;
@@ -318,7 +318,7 @@ shadows
     width: 100%;
     top: 0;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
@@ -512,7 +512,7 @@ animation properties
     bottom:0;
 }
 button, optgroup, select, textarea {
-    font-size: 1rem !important;
+    font-size: 1em !important;
     text-shadow: 1px 1px 2px black;
 }
 
@@ -520,7 +520,7 @@ button, optgroup, select, textarea {
 .homepage-hero-module {
     border-right: none;
     border-left: none;
-    position: absolute;
+    position: fixed;
 min-width: 100%;
 top: 0;
 z-index: -1;

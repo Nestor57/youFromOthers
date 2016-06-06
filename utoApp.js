@@ -49,42 +49,15 @@ $(function() {
 
 $(window).load(function() {
     $('#landingVideo').get(0).play()
-    $('#bodyVideo').get(0).play()
-})
-
-$('#landingVideo').load(function() {
-
 })
 var checkScroll = function(event) {
     var scrollPos = document.body.scrollTop
     var nextPos = 0
-    if (scrollPos < window.innerHeight) {
-        $('.landPageContainer').scroll(completeScroll);
-    }else{
+    if (scrollPos > window.innerHeight) {
       document.getElementById('mainNavbar').style.opacity = 1
     }
 }.bind(this)
 
-var completeScroll = function(event) {
-    var scrollPos = document.body.scrollTop;
-    var nextPos = 0;
-    if (scrollPos < window.innerHeight && isScrollComplete) {
-      isScrollComplete= false
-        nextPos = window.innerHeight
-        $('html, body').stop().animate({
-            scrollTop: nextPos
-        }, '150', 'swing')
-        $('.landPageContainer').stop().animate({
-            scrollTop: 0
-        }, '150', 'swing', function() {
-            document.getElementById('mainNavbar').style.opacity = 1
-              $('.landPageContainer').scroll(checkScroll)
-              isScrollComplete = true
-        })
-        event.preventDefault()
-        event.stopPropagation()
-    }
-}.bind(this)
 
 $('.toMainPartButton').click(function() {
     $('.landPageContainer').stop().animate({

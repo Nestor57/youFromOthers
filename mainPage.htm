@@ -17,6 +17,25 @@
 </head>
 
 <body>
+<!DOCTYPE html>
+<html ng-app='helloPage'>
+
+<head>
+    <title></title>
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel='shortcut icon' href='photos/icon.png' type='image/png'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css' integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd' crossorigin='anonymous'>
+    <link rel='stylesheet' type='text/css' href='styles/utoStyle.css'>
+    <link rel='stylesheet' type='text/css' href='styles/meStyle.css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="./libs/responsive-calendar/responsive-calendar.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
 
     <div class='socialButtons' id='socialButtons'>
         <div class='pluso' data-background='transparent' data-options='big,round,line,horizontal,nocounter,theme=08' data-services='facebook,linkedin,twitter,vkontakte,google,email'></div>
@@ -88,22 +107,6 @@
             <button class='toMainPartButton button-clear' id='toMainPart'><span class='box-with-text'>Узнать больше</span></button>
         </div>
     </div>
-
-    <!-- body scroll-->
-    <div id='landPageBody'>
-        <div class="homepage-hero-module">
-            <div class="video-container">
-                <video preload="none" loop class="fillWidth" id='bodyVideo'>
-                    <source src="photos/MP4/Beach-Ball.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                    <source src="photos/WEBM/Beach-Ball.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                    <source src="photos/OGV/Beach-Ball.ogv" type="video/ogv" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                </video>
-                <div class="poster hidden">
-                    <img src="photos/SnapShots/Beach-Ball.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div class='landPageContainer'>
             <div class='landPageInner'>
                 <div class='contentBlock schemaBlock'>
                     <div class='headerPage' id='headerFirst'>Диалог - это Комплекс Действий при решении</div>
@@ -310,8 +313,6 @@
                     <strong>Техника Диалога помогает</strong> предсказать результат, когда индивидуальные знания, опыт и навыки сливаются в коллективные действия
                 </div>
             </div>
-        </div>
-    </div>
 
     <script type='application/javascript' src='libs/utils.js'></script>
     <script type='application/javascript' src='libs/tether.js'></script>
@@ -321,5 +322,4 @@
     <script async type='application/javascript' src='./utoApp.js'></script>
     <script async type='application/javascript' src='libs/fastclick.js'></script>
 </body>
-
 </html>
