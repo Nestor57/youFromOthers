@@ -15,14 +15,14 @@ body {
 ::-webkit-scrollbar {
     width: 0;
 }
+
 .navbar {
-    position: fixed;
     width: 100%;
     background-color: #005566;
-    transition: 0.7s linear all;
     -webkit-transition: 0.7s linear all;
     text-shadow: 1px 1px white;
 }
+
 ul, menu, dir {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -46,7 +46,7 @@ ul, menu, dir {
 }
 #gallaryId {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .floatingContactForm {
     position: fixed;
@@ -65,10 +65,6 @@ ul, menu, dir {
 .modal-content {
     max-height: 60%;
 }
-.navbar-toggle {
-    background: white;
-    color: black;
-}
 
     .headerPage{
       padding-top:0.2rem;
@@ -84,29 +80,27 @@ ul, menu, dir {
       border-bottom-right-radius: 5px;
   }
   @media all and (orientation: landscape) {
-      .navbar {
-          width: 8rem;
-          height: 100%;
+      .contentBlock{
+        flex-direction: raw;
       }
-      .landPageInner{
-        margin-left: 8rem;
+      .headerPage{
+        width: 50%;
       }
-      .nav {
-          flex-direction: column;
-          justify-content: space-around;
-          align-content: space-around;
-              flex-wrap: nowrap;
-              height: 100%;
-          border-right:    1px solid white;
+      .videoContainer{
+        width: 50%;
+        height: 85%;
       }
   }
   @media all and (orientation: portrait) {
-      .nav {
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        border-bottom:    1px solid white;
+      .contentBlock{
+        flex-direction: column;
+      }
+      .headerPage{
+        width: 100%;
+      }
+      .videoContainer{
+        width: 100%;
+        height: 85%;
       }
   }
   @-webkit-keyframes pulse {
@@ -308,18 +302,19 @@ shadows
     margin-top: 5vh;
     margin-bottom: 5vh;
     border-radius: 0;
+    font-size: 2rem;
+    background-color:rgb(100, 200,255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 .alert-success{
   border-color: transparent;
-  background-color: transparent;
   color: white;
 }
 .headerPage {
-    width: 100%;
     top: 0;
-    color: white;
+    color: black;
     font-size: 1.4em;
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0,0.2);
 }
 
 .socialButtons {
@@ -410,21 +405,22 @@ animation properties
 }
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
 .contentBlock {
-    height: auto;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
+    align-content: space-between;
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    width: calc(100% - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    color: white;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    color: black;
     border-top: 1px solid white;
     text-shadow: none;
     z-index: 20;
+    background-color: rgb(255,255,255);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    padding-bottom: 1rem;
+    position:relative;
 }
 .carousel, .carousel-inner {
     display: flex;
@@ -434,7 +430,6 @@ animation properties
     align-content: center;
     height: 100%;
     width: 100%;
-        text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 .column {
     height: auto;
@@ -444,6 +439,12 @@ animation properties
 }
 .nav, .navbar-nav .nav-item+.nav-item {
     display: flex;
+    flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+            flex-wrap: nowrap;
+            height: 100%;
+        border-right:    1px solid white;
     margin: 0;
 }
 
@@ -579,4 +580,17 @@ outline: none !important;
 }
 .modal-dialog input,.modal-dialog button{
   text-shadow: none;
+}
+.videoContainer{
+  box-shadow: 1px 1px 3px black;
+}
+.fullImageDiv img{
+  height:100%;
+  width:auto%;
+}
+.nextSlideButton{
+  position: absolute;
+  flex: 0 0 auto;
+  top:calc(100% - 50px);
+  left:calc(50% - 50px);
 }
