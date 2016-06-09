@@ -22,7 +22,12 @@ body {
     -webkit-transition: 0.7s linear all;
     text-shadow: 1px 1px white;
 }
-
+.navbar-toggle{
+  width:3rem;
+  height:3rem;
+  background-color: transparent;
+  float:left;
+}
 ul, menu, dir {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -71,9 +76,6 @@ ul, menu, dir {
       padding-bottom:0.2rem;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-    }
-    .schemaBlock{
-      height: 400px !important;
     }
     .videoContent{
       border-bottom-left-radius: 5px;
@@ -590,7 +592,12 @@ outline: none !important;
 }
 .nextSlideButton{
   position: absolute;
+  background-color:white;
   flex: 0 0 auto;
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px black;
   top:calc(100% - 50px);
   left:calc(50% - 50px);
 }

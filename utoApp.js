@@ -50,13 +50,6 @@ $(function() {
 $(window).load(function() {
     $('#landingVideo').get(0).play()
 })
-var checkScroll = function(event) {
-    var scrollPos = document.body.scrollTop
-    var nextPos = 0
-    if (scrollPos > window.innerHeight) {
-      document.getElementById('mainNavbar').style.opacity = 1
-    }
-}.bind(this)
 
 
 $('.toMainPartButton').click(function() {
@@ -64,8 +57,13 @@ $('.toMainPartButton').click(function() {
         scrollTop: window.innerHeight
     }, '300', 'swing')
 })
-var isScrollComplete = true;
-$('.landPageContainer').scroll(checkScroll);
-$(document).scroll(()=>{
-    document.getElementById('mainNavbar').style.opacity = 0;
-});
+
+$('.nextSlideButton').click(function() {
+   var scrollTargetIndex = parseInt(this.id);
+   var scrollTarget = $('#contentBlock' + scrollTargetIndex);
+   if (scrollTarget){
+     $('body').stop().animate({
+      scrollTop: scrollTarget.offset().top
+    },'150', 'swing');
+   }
+})

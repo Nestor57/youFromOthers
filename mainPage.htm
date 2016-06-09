@@ -36,16 +36,6 @@
     </head>
 
     <body>
-<defs>
-  <filter id="dropshadow" height="130%">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-    <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
-    <feMerge>
-      <feMergeNode/> <!-- this contains the offset blurred image -->
-      <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-    </feMerge>
-  </filter>
-</defs>
 
         <div class='socialButtons' id='socialButtons'>
             <div class='pluso' data-background='transparent' data-options='big,round,line,horizontal,nocounter,theme=08' data-services='facebook,linkedin,twitter,vkontakte,google,email'></div>
@@ -59,9 +49,10 @@
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                    <svg height="100%" width="100%">
+                    <polyline points="5,5 35,30 65,5" style="fill:none;stroke:green;stroke-width:2" />
+                    <polyline points="5,25 35,50 65,25" style="fill:none;stroke:green;stroke-width:2" />
+                </svg>
               </button>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -109,12 +100,7 @@
             </div>
             <div class='centerBlock' id='firstCentralBlock'>
                 Техника Диалога
-                <!-- - захват ресурса эмерджентности  -->
             </div>
-            <!--  <div class='centerBlockHigh' id='firstCentralBlock'>
-            Авторский проект Ольги Смирновой
-        </div>
-      -->
 
             <div class='centerBlock' id='secondCentralBlock'>
                 Обучение Говорить и Думать Совместно
@@ -127,7 +113,8 @@
             </div>
         </div>
         <div class='landPageInner'>
-            <div class='contentBlock schemaBlock'>
+
+            <div class='contentBlock' id='contentBlock1'>
                 <div class='headerPage' id='headerFirst'>Диалог - это Комплекс Действий при решении</div>
                 <div class='carousel slide' data-ride='carousel' id='mainCarousel'>
                     <div class='carousel-inner' role='listbox'>
@@ -173,31 +160,33 @@
                         <li data-target='#mainCarousel' data-slide-to='6' class='carusel-dots'></li>
                     </ol>
                 </div>
-                <svg class='nextSlideButton' height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="none" fill="red"/>
+                <div class='nextSlideButton' id='2button'>
+                    <svg height="100" width="100">
                     <polyline points="20,30 50,55 80,30" style="fill:none;stroke:green;stroke-width:2" />
                     <polyline points="20,50 50,75 80,50" style="fill:none;stroke:green;stroke-width:2" />
                 </svg>
+                  </div>
             </div>
 
             <div class='alert alert-success' role='alert'>
                 <strong>Техника Диалога помогает</strong> измененить Качества Действия человека/группы
             </div>
 
-            <div class='contentBlock'>
+            <div class='contentBlock' id='contentBlock2'>
                 <div class='headerPage'>Здравствуйте, меня зовут Ольга Смирнова.
                     <br>Я автор проекта 'Техника Диалога в бизнес-коммуникациях'</div>
                 <div class='videoContainer'>
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pV8DowRH1cU?frameborder=0&color=white&modestbranding=0&showinfo=0"></iframe>
                 </div>
-                <svg class='nextSlideButton' height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="none" fill="red" />
+                <div class='nextSlideButton' id='3button'>
+                    <svg height="100" width="100">
                     <polyline points="20,30 50,55 80,30" style="fill:none;stroke:green;stroke-width:2" />
                     <polyline points="20,50 50,75 80,50" style="fill:none;stroke:green;stroke-width:2" />
                 </svg>
+              </div>
             </div>
 
-            <div class='contentBlock'>
+            <div class='contentBlock' id='contentBlock3'>
                 <div class='headerPage'>В создании проекта 'Техника Диалога' меня вдохновляли и поддерживали</div>
                 <div class='carousel slide' data-ride='carousel' id='gallaryId'>
                     <div class='carousel-inner' role='listbox'>
@@ -276,27 +265,29 @@
 
                     </ol>
                 </div>
-                <svg class='nextSlideButton' height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="none" fill="red" />
+                <div class='nextSlideButton' id='4button'>
+                    <svg height="100" width="100">
                     <polyline points="20,30 50,55 80,30" style="fill:none;stroke:green;stroke-width:2" />
                     <polyline points="20,50 50,75 80,50" style="fill:none;stroke:green;stroke-width:2" />
                 </svg>
+              </div>
             </div>
 
             <div class='alert alert-success' role='alert'>
                 <strong>Техника Диалога помогает</strong> понять условия, чтобы коммуникация в Диалоге началась
             </div>
 
-            <div class='contentBlock'>
+            <div class='contentBlock' id='contentBlock4'>
                 <div class='headerPage'>'Техника Диалога' позволяет раскрыть Исключительные Возможности ресурсов человеческого взаимодействия</div>
                 <div class='videoContainer'>
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pV8DowRH1cU?frameborder=0&color=white&modestbranding=0&showinfo=0"></iframe>
                 </div>
-                <svg class='nextSlideButton' height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="none" fill="red" />
+                <div class='nextSlideButton' id='5button'>
+                    <svg height="100" width="100">
                     <polyline points="20,30 50,55 80,30" style="fill:none;stroke:green;stroke-width:2" />
                     <polyline points="20,50 50,75 80,50" style="fill:none;stroke:green;stroke-width:2" />
                 </svg>
+                  </div>
             </div>
 
             <div class='alert alert-info' role='alert'>3 этапа диалогической коммуникации</div>
@@ -326,7 +317,7 @@
                 <strong>Техника Диалога помогает</strong> понять признаки завершения диалогических коммуникаций
             </div>
 
-            <div class='contentBlock columnStreth dialogCarouselContent'>
+            <div class='contentBlock columnStreth dialogCarouselContent' id='contentBlock5'>
                 <div class='headerPage' id='headerFirst'>Диалог - это Комплекс Действий при решении</div>
                 <div class='innerBlock '>
                     <div class='leftTitle column'>Диалог это:</div>
@@ -343,27 +334,29 @@
                         </div>
                     </div>
                 </div>
-                <svg class='nextSlideButton' height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="none" fill="red" />
+                <div class='nextSlideButton' id='6button'>
+                    <svg height="100" width="100">
                     <polyline points="20,30 50,55 80,30" style="fill:none;stroke:green;stroke-width:2" />
                     <polyline points="20,50 50,75 80,50" style="fill:none;stroke:green;stroke-width:2" />
                 </svg>
+                  </div>
             </div>
 
             <div class='alert alert-success' role='alert'>
                 <strong>Техника Диалога помогает</strong> понять на какой этапе происходит диалог
             </div>
 
-            <div class='contentBlock'>
+            <div class='contentBlock' id='contentBlock6'>
                 <div class='headerPage'>Мы делаем себя и окружающих нас людей неконкурентноспособными</div>
                 <div class='videoContainer'>
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jbDRYlbwm60?frameborder=0&color=white&modestbranding=0&showinfo=0"></iframe>
                 </div>
-                <svg class='nextSlideButton' height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="none" fill="red" />
+                <div class='nextSlideButton' id='7button'>
+                    <svg height="100" width="100">
                     <polyline points="20,30 50,55 80,30" style="fill:none;stroke:green;stroke-width:2" />
                     <polyline points="20,50 50,75 80,50" style="fill:none;stroke:green;stroke-width:2" />
                 </svg>
+                  </div>
             </div>
 
             <div class='alert alert-success' role='alert'>
