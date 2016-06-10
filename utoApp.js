@@ -62,8 +62,15 @@ $('.nextSlideButton').click(function() {
    var scrollTargetIndex = parseInt(this.id);
    var scrollTarget = $('#contentBlock' + scrollTargetIndex);
    if (scrollTarget){
-     $('body').stop().animate({
+     $('body,html,document').stop().animate({
       scrollTop: scrollTarget.offset().top
     },'150', 'swing');
    }
+})
+
+$('.toMainPartButton').click(function() {
+   var scrollTarget = $('#contentBlock1');
+     $('body,html,document').stop().animate({
+      scrollTop: scrollTarget.offset().top
+    },'150', 'swing');
 })

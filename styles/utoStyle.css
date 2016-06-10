@@ -53,12 +53,27 @@ ul, menu, dir {
     width: 100%;
     height: 100%;
 }
-.floatingContactForm {
+.angleButton {
     position: fixed;
-    right: 5px;
-    bottom: 5px;
-    padding: 1vmin;
+    width:5vmax;
+    height:5vmax;
     z-index: 99999;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 50%;
+}
+.navigationFromContainer{
+  position: fixed;!important;
+      left: 0;
+      z-index: 99999;
+}
+.contactForm{
+  right: 5px;
+  bottom: 5px;
+  padding: 0;
+}
+.navigationFrom{
+  left: 5px;
+  top: 5px;
 }
 .displaingDivs {
     padding: 5px;
@@ -175,7 +190,7 @@ ul, menu, dir {
 .toMainPartButton {
     width: auto;
     font-size: 3vmin;
-    height: 44px;
+    height: auto;
     color: white;
     border: none;
     background-color: transparent !important;
@@ -306,11 +321,10 @@ shadows
     border-radius: 0;
     font-size: 2rem;
     background-color:rgb(100, 200,255);
+    border-color: transparent;
+    color: white;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-}
-.alert-success{
-  border-color: transparent;
-  color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .headerPage {
     top: 0;
@@ -407,7 +421,7 @@ animation properties
 }
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
 .contentBlock {
-    height: 80vh;
+    height: 95vh;
     display: flex;
     justify-content: space-between;
     align-content: space-between;
@@ -416,11 +430,10 @@ animation properties
     margin-bottom: 10vh;
     width: 100%;
     color: black;
-    border-top: 1px solid white;
     text-shadow: none;
     z-index: 20;
     background-color: rgb(255,255,255);
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     padding-bottom: 1rem;
     position:relative;
 }
@@ -514,7 +527,7 @@ animation properties
     margin: 0;
     bottom:0;
 }
-button, optgroup, select, textarea {
+optgroup, select, textarea {
     font-size: 1em !important;
     text-shadow: 1px 1px 2px black;
 }
@@ -584,7 +597,11 @@ outline: none !important;
   text-shadow: none;
 }
 .videoContainer{
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border:none;
+}
+.videoContainer iframe{
+  border:none;
 }
 .fullImageDiv img{
   height:100%;
@@ -594,10 +611,33 @@ outline: none !important;
   position: absolute;
   background-color:white;
   flex: 0 0 auto;
-  height:100px;
-  width:100px;
+  height:10vh;
+  width:10vh;
   border-radius: 50%;
-  box-shadow: 1px 1px 3px black;
-  top:calc(100% - 50px);
-  left:calc(50% - 50px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  top:calc(100% - 5vh);
+  left:calc(50% - 5vh);
+}
+.imageCollection{
+  display: flex;
+  width:100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.collectionItem{
+  flex-grow: 1;
+  margin: 5px;
+ width: calc(33% - 10px);
+ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.collectionImage{
+  width:100%;
+  height:100%;
+}
+.collectionItemText{
+  position: absolute;
 }
