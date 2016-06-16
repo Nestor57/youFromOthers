@@ -5,7 +5,7 @@
 //---------------*/
 $(function() {
     function scaleBannerVideoSize(element) {
-            $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
     }
 
     $('.carousel').carousel({
@@ -49,6 +49,9 @@ $(function() {
 
 $(window).load(function() {
     $('#landingVideo').get(0).play()
+    var corouselHeight = $('.maxHeightDiv').height()
+    $('#mainCarousel').height(corouselHeight)
+    $('#mainCarousel .carousel-inner').height(corouselHeight)
 })
 
 
@@ -59,18 +62,18 @@ $('.toMainPartButton').click(function() {
 })
 
 $('.nextSlideButton').click(function() {
-   var scrollTargetIndex = parseInt(this.id);
-   var scrollTarget = $('#contentBlock' + scrollTargetIndex);
-   if (scrollTarget){
-     $('body,html,document').stop().animate({
-      scrollTop: scrollTarget.offset().top
-    },'150', 'swing');
-   }
+    var scrollTargetIndex = parseInt(this.id);
+    var scrollTarget = $('#contentBlock' + scrollTargetIndex);
+    if (scrollTarget) {
+        $('body,html,document').stop().animate({
+            scrollTop: scrollTarget.offset().top
+        }, '150', 'swing');
+    }
 })
 
 $('.toMainPartButton').click(function() {
-   var scrollTarget = $('#contentBlock1');
-     $('body,html,document').stop().animate({
-      scrollTop: scrollTarget.offset().top
-    },'150', 'swing');
+    var scrollTarget = $('#contentBlock1');
+    $('body,html,document').stop().animate({
+        scrollTop: scrollTarget.offset().top
+    }, '150', 'swing');
 })
