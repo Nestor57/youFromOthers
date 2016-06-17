@@ -51,6 +51,7 @@ $(window).load(function() {
     $('#landingVideo').get(0).play()
     var corouselHeight = $('.maxHeightDiv').height()
     $('#mainCarousel').height(corouselHeight)
+      $('#mainCarousel').css({top:($(window).height()/2-corouselHeight/2)})
     $('#mainCarousel .carousel-inner').height(corouselHeight)
 })
 

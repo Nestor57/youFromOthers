@@ -78,4 +78,4 @@ gulp.task('watch', function() {
     gulp.watch('pages/ru/*.htm', ['minify-html']);
 })
 
-gulp.task('default', ['concatHtml',/* 'concatJs',*/ 'minifyHtm'/*, 'minifyJs''minify-css'*/,'imagemin' ]);
+gulp.task('default', ['concatHtml',/* 'concatJs',*/ 'minifyHtm'/*, 'minifyJs''minify-css','imagemin'*/ ]);
