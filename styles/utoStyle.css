@@ -49,19 +49,16 @@ ul, menu, dir {
     width: 100%;
     height: 100%;
 }
-#gallaryId {
-    height: 100%;
-}
 #contentBlock3 {
     padding: 1rem;
 }
 .angleButton {
-    position: fixed;
+    position: fixed !important;
     width: 3rem;
     height: 3rem;
-    z-index: 99999;
+    z-index: 100;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 50%;
+    border-radius: 50% !important;
     transition: all .2s;
 }
 .angleButton:hover, .nextSlideButton:hover {
@@ -69,9 +66,8 @@ ul, menu, dir {
 }
 .navigationFromContainer {
     position: fixed;
-    !important;
     left: 0;
-    z-index: 99999;
+    z-index: 100;
 }
 .contactForm {
     right: 5px;
@@ -109,12 +105,12 @@ ul, menu, dir {
     .headerPage {
         width: 50%;
     }
-    #contentBlock3 .headerPage {
-        width: 35%;
-    }
     .videoContainer {
         width: 50%;
         height: 85%;
+    }
+    .leftContent{
+        width: 50%;
     }
     .collectionItem {
         max-width: calc(95vw/3);
@@ -122,8 +118,9 @@ ul, menu, dir {
     }
     #gallaryId {
         width: 65%;
+        height:100%;
     }
-    .video-container video.fillWidth {
+    .video-container video.fillWidth,.video-container .poster img,.fullImageDiv img {
         object-fit: cover;
         width: 100%;
         min-height: 100%;
@@ -141,6 +138,9 @@ ul, menu, dir {
         width: 100%;
         height: 85%;
     }
+    .leftContent{
+        width: 100%;
+    }
     .collectionItem {
         max-width: calc(95vw/2);
         max-height: calc(95vh/4);
@@ -148,7 +148,7 @@ ul, menu, dir {
     #gallaryId {
         width: 100%;
     }
-    .video-container video.fillWidth {
+    .video-container video.fillWidth,.video-container .poster img,.fullImageDiv img {
         object-fit: cover;
         width: auto;
         min-width: 100%;
@@ -289,14 +289,17 @@ ul {
 }
 #firstCentralBlock {
     font-size: 2.5em;
+    opacity: 0;
 }
 #secondCentralBlock {
     font-size: 2.5em;
     color: rgb(255, 153, 0);
     text-shadow: 1px 1px 2px black;
+      opacity: 0;
 }
 #thirdCentralBlock {
     font-size: 1.8em;
+      opacity: 0;
 }
 .headerBlocks {
     width: auto;
@@ -304,12 +307,6 @@ ul {
     z-index: 15;
     padding: 5px;
     margin: 5px;
-}
-.toRightArrow {
-    width: 40px;
-    height: 40px;
-    background: url(../photos/Right-black-arrow.png) no-repeat center;
-    background-size: cover;
 }
 .sideHeaderBlocks {
     z-index: 10;
@@ -328,6 +325,7 @@ html, body {
     height: 100vh;
     margin: 0;
     width: 100%;
+    color:white;
     position: relative;
     text-shadow: 1px 1px 2px black;
     /*color: rgb(0, 102, 153);*/
@@ -367,7 +365,7 @@ html, body {
 }
 .headerPage, .centerHeader, .headerPageCenter {
     top: 0;
-    color: black;
+    color: white;
     font-size: 1.7em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -397,7 +395,7 @@ html, body {
 }
 @font-face {
     font-family: Lobster-Regular;
-    src: url(../fonts/lobster2.ttf);
+    src: url(lobster2.ttf);
 }
 
 /*--
@@ -488,18 +486,7 @@ animation properties
     color: black;
     text-shadow: none;
     z-index: 20;
-    background-color: rgba(255, 255, 255, 0.93);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     position: relative;
-}
-.blockBackgroundImage {
-    background: url(../photos/firstBack.jpg) no-repeat center;
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    opacity: 0.3;
-    margin: 5%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), 0 0px 3px rgba(0, 0, 0, 0.8);
 }
 .blockBackgroundElements {
     width: 90%;
@@ -653,9 +640,6 @@ optgroup, select, textarea {
     background: #000;
 }
 .video-container .poster img {
-    min-width: 100%;
-    min-height: 100%;
-    top: 0;
     position: absolute;
 }
 .video-container video {
@@ -693,8 +677,6 @@ optgroup, select, textarea {
     border: none;
 }
 .fullImageDiv img {
-    height: 100%;
-    width: auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .nextSlideButton {
@@ -757,6 +739,7 @@ optgroup, select, textarea {
     left: 0;
     text-align: center;
     color: white;
+    font-size:1.5rem;
     text-shadow: 0px 0px 30px black, 1px 1px 5px black, 0px 0px 20px black, 0px 0px 10px black;
 }
 .btn {
@@ -766,6 +749,7 @@ optgroup, select, textarea {
 .carousel-caption {
     text-shadow: 0px 0px 30px black, 1px 1px 5px black, 0px 0px 20px white, 0px 0px 10px black;
     bottom: 2rem;
+    font-size: 0.7em;
     left: 1rem;
     right: 1rem;
 }
@@ -780,4 +764,31 @@ optgroup, select, textarea {
 }
 .btn-secondary:hover {
     background-color: rgb(60, 150, 255) !important;
+}
+#gallaryId .fullImageDiv img {
+    object-fit: contain;
+}
+.dropdown-menu{
+  font-size: 1.3rem;
+}
+.modal-dialog{
+  min-width: 60%;
+  line-height: 1.8;
+}
+.leftContent{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.leftContent > .nextSlideButton{
+   position: inherit;
+   top: auto;
+   left: auto;
+}
+.leftContent > .headerPage{
+  width:100%;
+}
+h3,h2{
+margin-bottom: 0;
 }
